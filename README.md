@@ -59,7 +59,7 @@ Initially a flow chart was created to work out how the user navigates the site. 
 ## Fixed and Unfixed Bugs
 
 * Fixed bugs:
-    * When I ADD TEXT HERE
+    * When initial commit was made, it failed as I had divergent branches, there was remote work that was not local. I found the answer on Slack. I integrated the remote changes by using the 'git config pull.rebase false' command to tell git how to merge the changes 'git pull' command to get the changes from the local branch, and then it was possible to 'git push' my commit.
 
 * No known unfixed bugs
 
