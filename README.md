@@ -3,7 +3,7 @@ The website is aimed at people require care services, and carers who may be sear
 The app provides a list of Care Providers, their services information and contact details. Registered users are able to rate their services, and also leave comments on the service they received.
 The design is aimed to be simple and easy to navigate. Accessiblity was a major factor in the site design. 
 
-Link to the site here https://ADD LINK HERE
+Link to the site here https://carehub-caresearch2023.herokuapp.com/
 
 ## Am I Responsive mockups
 ![Responsive Mockup](https://github.com/RozWelch/ ADD MOCKUP HERE)
@@ -95,8 +95,12 @@ The following commands were used throughout the project:
 * git commit -m "I add commit message here" - This command was used to to commit changes to the local repository.
 * git push - This command is used to push all committed changes to the GitHub repository. 
 
-* Deployment    
-    * ADD TEXT HERE
+* Deployment from Heroku:    
+    * Navigate to Deploy tab 
+    * Click on Github for deployment method
+    * Search and connect to app name (CareHub-Project4-2023)
+    * Scroll to bottom and click 'Deploy Branch'
+    * On successful deploy, I clicked on 'View app' and got a successful deploy message
 
 ## Credits
 
