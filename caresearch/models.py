@@ -12,6 +12,7 @@ class CareProvider(models.Model):
     address_line_1 = models.CharField(max_length=250)
     address_line_2 = models.CharField(max_length=250, blank=True)
     address_line_3 = models.CharField(max_length=250, blank=True)
+    county = models.CharField(max_length=100) 
     postcode = models.CharField(max_length=8)
     phone_number = models.IntegerField()
     outofhours_phone = models.IntegerField()
@@ -19,4 +20,45 @@ class CareProvider(models.Model):
     disabled_parking = models.BooleanField()
     provider_image = CloudinaryField('image', default='placeholder')
     provider_approved_status = models.IntegerField(choices=PROVIDER_APPROVED_STATUS, default=0)
-    likes = models.ManyToManyField(User, realated_name='provider_likes', blank=True)
+    likes = models.ManyToManyField(User, related_name='provider_likes', blank=True)
+
+    def __str__(self):
+        return self.title
+
+    def number_of_likes(self):
+        return self.likes.count()
+
+class CareSeeker(models.Model):
+    careseeker_username = models.CharField(max_length=200, unique=True, primary_key=True)
+    password = models.CharField(max_length=20)
+    first_name = models.CharField(max_length=100)
+    second_name = models.CharField(max_length=100)
+    address_line_1 = models.CharField(max_length=250)
+    address_line_2 = models.CharField(max_length=250, blank=True)
+    address_line_3 = models.CharField(max_length=250, blank=True)
+    county = models.CharField(max_length=100) 
+    postcode = models.CharField(max_length=8, blank=True)
+    landline_phone_number = models.IntegerField()
+    mobile_phone = models.IntegerField()
+    email = models.EmailField()
+    needs_assistance = models.BooleanField()
+    disabled_parking = models.BooleanField()
+
+    def __str__(self):
+        return self.title
+
+class CareProviderComments(models.Model):
+    
+    careprovider = models.ForeignKey(CareProvider, on_delete=models.CASCADE,
+                             related_name="careprovider_comments")
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    comment = models.TextField()
+    date_created = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['-date_created']
+
+    def __str__(self):
+        return f"Comment {self.comment} by {self.name}"
