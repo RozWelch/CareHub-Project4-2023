@@ -23,7 +23,7 @@ class CareProvider(models.Model):
     likes = models.ManyToManyField(User, related_name='provider_likes', blank=True)
 
     def __str__(self):
-        return self.title
+        return self.careprovider_username
 
     def number_of_likes(self):
         return self.likes.count()
