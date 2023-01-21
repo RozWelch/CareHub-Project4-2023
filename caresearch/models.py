@@ -45,7 +45,7 @@ class CareSeeker(models.Model):
     disabled_parking = models.BooleanField()
 
     def __str__(self):
-        return self.title
+        return self.careseeker_username
 
 class CareProviderComments(models.Model):
     
