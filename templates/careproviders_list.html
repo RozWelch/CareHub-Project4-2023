@@ -23,7 +23,7 @@
                                     <p class="author">Business Name: {{ careprovider.business_name }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link">
+                            <a href="{% url  'careproviderdetail' careprovider.pk %}" class="post-link">
                                 <h2 class="card-title">{{ careprovider.business_name }}</h2>
                                 <p class="card-text">{{ careprovider.type_of_care }}</p>
                             </a>
