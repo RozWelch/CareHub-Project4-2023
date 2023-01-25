@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from django.views.generic import DetailView
 from .models import CareProvider
-
+from .forms import CareProviderCommentsForm
 
 class CareProviderList(generic.ListView):
     model = CareProvider
