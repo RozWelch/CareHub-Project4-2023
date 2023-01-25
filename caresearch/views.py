@@ -4,6 +4,9 @@ from django.views.generic import DetailView
 from .models import CareProvider
 from .forms import CareProviderCommentsForm
 
+def IndexPage(request):
+    return render(request, "index.html")
+
 class CareProviderList(generic.ListView):
     model = CareProvider
     queryset = CareProvider.objects.filter(provider_approved_status=1).order_by('business_name')
