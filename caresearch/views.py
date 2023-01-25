@@ -16,20 +16,22 @@ class CareProviderList(generic.ListView):
 class CareProviderDetail(DetailView):
     model = CareProvider
     template_name = 'careprovider_detail.html'
-    # def get(self, request, business_name, *args, **kwargs):
-    #     queryset = CareProvider.objects.filter(provider_approved_status)
-    #     business = get_object_or_404(queryset, business_name=business_name)
-    #     careprovidercomments = business.careprovidercomments(approved=True).order_by('-date_created')
-    #     likes = False
-    #     if business.like.filter(id=self.request.user.id).exists():
-    #         likes = True
 
-    #     return render(
-    #         request, 
-    #         "careprovider_detail.html",
-    #         {
-    #             "business": business,
-    #             "careprovidercomments": careprovidercomments,
-    #             "likes": likes
-    #         },
-    #         )
+    def get(self, request, pk, *args, **kwargs):
+        queryset = CareProvider.objects.filter(provider_approved_status=1)
+        post = get_object_or_404(queryset, pk=pk)
+        careprovidercomments = post.careprovidercomments.filter(approved=True).order_by('-date_created')
+        likes = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            likes = True
+
+        return render(
+            request, 
+            "careprovider_detail.html",
+            {
+                "business": business,
+                "careprovidercomments": careprovidercomments,
+                "likes": likes,
+                "comment_form": CommentForm()
+            },
+            )
