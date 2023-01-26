@@ -7,17 +7,17 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <!-- Care Provider Business Name -->
-                <h1 class="post-title">{{ careprovider.business_name }}</h1>
+                <h1 class="post-title">{{ post.business_name }}</h1>
                 </h1>
                 <!-- Care Provider Type of care and Main contact name-->
-                <p class="post-subtitle">{{ careprovider.type_of_care }} | {{ careprovider.main_contact_name }}</p>
+                <p class="post-subtitle">{{ post.type_of_care }} | {{ post.main_contact_name }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in careprovider.provider_image.url %}
+                {% if "placeholder" in post.provider_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
-                <img src=" {{ careprovider.provider_image.url }}" width="100%">
+                <img src=" {{ post.provider_image.url }}" width="100%">
                 {% endif %}
             </div>
         </div>
@@ -31,16 +31,16 @@
                 <!-- The Care Provider details goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">
-                    {{ careprovider.address_line_1 | safe }}
+                    {{ post.address_line_1 | safe }}
                 </p>
                 <div class="row">
 
                     <div class="col-1">
                         <!-- The number of likes goes before the closing strong tag -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ careprovider.number_of_likes }} </strong>
+                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
                     </div>
                     <div class="col-1">
-                        {% with careprovidercomments.count as total_comments %}
+                        {% with post.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
                             <!-- Our total_comments variable goes before the closing strong tag -->
                             {{ total_comments }}</strong>
@@ -64,14 +64,14 @@
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
                         <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-                        {{ careprovidercomments.name }}
+                        {{ comment.name }}
                         <span class=" text-muted font-weight-normal">
                             <!-- The comment's created date goes here -->
-                            {{ careprovidercomments.date_created }}
+                            {{ comment.date_created }}
                         </span> wrote:
                     </p>
                     <!-- The body of the comment goes before the | -->
-                    {{ careprovidercomments.comment | linebreaks }}
+                    {{ comment.comment | linebreaks }}
                 </div>
                 <!-- Our for loop ends here -->
                 {% endfor %}

@@ -13,16 +13,12 @@ body {
     color: #e8397a;
 }
 
-.thin {
-    font-weight: 300;
-}
-
 .light-bg {
     background-color: #fff;
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #1c2d50;
 }
 
 .main-bg {
