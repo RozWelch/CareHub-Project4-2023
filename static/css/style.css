@@ -1,12 +1,12 @@
 body {
-    background-color: #e5ebee;
+    background-color: #e3ebee;
 }
 
 .brand {
     font-family: 'Martel', serif;
     font-size: 2.5rem;
     font-weight: 900;
-    color: #1c2d50;
+    color: #1a4752;
 }
 
 #pinklogo {
@@ -18,11 +18,11 @@ body {
 }
 
 .dark-bg {
-    background-color: #1c2d50;
+    background-color: #1a4752;
 }
 
 .main-bg {
-    background-color: #d8e3e7;
+    background-color: #e3ebee;
 }
 
 .card {
@@ -104,12 +104,12 @@ body {
 
 .btn-signup {
     background-color: #00aab2;
-    color: #d8e3e7;
+    color: #e3ebee;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #d8e3e7;
+    background-color: #e3ebee;
     color: #00aab2;
 }
 
