@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, AbstractUser
 from cloudinary.models import CloudinaryField
 
 PROVIDER_APPROVED_STATUS = ((0, "Pending"), (1, "Approved_careprovider"))
@@ -12,12 +12,8 @@ class CareProvider(models.Model):
     type_of_care = models.CharField(max_length=250, null=True)
     main_contact_name = models.CharField(max_length=100)
     address_line_1 = models.CharField(max_length=250)
-    address_line_2 = models.CharField(max_length=250, blank=True)
-    address_line_3 = models.CharField(max_length=250, blank=True)
     county = models.CharField(max_length=100)
-    postcode = models.CharField(max_length=8)
     phone_number = models.IntegerField()
-    outofhours_phone = models.IntegerField()
     email = models.EmailField()
     disabled_parking = models.BooleanField()
     provider_image = CloudinaryField('image', default='placeholder')
