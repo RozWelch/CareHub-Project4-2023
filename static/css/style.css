@@ -37,7 +37,7 @@ body {
 
 .navbar ul a {
     color: #1a4752 !important;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-right: 35px;
 }
 
@@ -45,8 +45,25 @@ body {
     color: #e8397a !important;
 }
 
+/* Home page */
 
-/* List view */
+.signup-button {
+    background-color: #e8397a !important;
+    border-color: #d1356e !important;
+}
+
+.signup-button:hover {
+    background-color: #00aab2 !important;
+    border-color: #00aab2 !important;
+}
+
+.signup-area {
+    background-color: #fff !important;
+    padding: 20px;
+}
+
+
+
 .card {
     border: none;
     background-color: transparent;
