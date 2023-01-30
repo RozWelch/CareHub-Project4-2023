@@ -22,10 +22,6 @@ body {
     color: #e8397a;
 }
 
-.light-bg {
-    background-color: #fff;
-}
-
 .main-bg {
     background-color: #e3ebee;
 }
@@ -50,6 +46,8 @@ body {
 .signup-button {
     background-color: #e8397a !important;
     border-color: #d1356e !important;
+    border-radius: 18px !important;
+    margin-left: 10px;
 }
 
 .signup-button:hover {
@@ -62,7 +60,33 @@ body {
     padding: 20px;
 }
 
+.main-heading {
+    font-size: 2.7rem;
+}
 
+h2 {
+    font-size: 2.2rem;
+}
+
+.icons-heading {
+    font-size: 1.8rem;
+    color: #00aab2;
+}
+
+.icons-text {
+    font-size: 1.4rem;
+}
+
+.line-break {
+    border-top: 5px solid #628389;
+    margin: auto !important;
+}
+
+i {
+    color: #00aab2;
+}
+
+/* Next Section */
 
 .card {
     border: none;
