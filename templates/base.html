@@ -26,14 +26,14 @@
     <!-- Navigation -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container-fluid">
+        <div class="container">
             <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">care<span id="pinklogo">hub</span></span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
             aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
@@ -79,13 +79,15 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Carehub - Search for trusted Care Providers</p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i></p>
+    <footer class="footer mt-auto py-3 footer">
+        <p class="footer m-0 text-center">Carehub - Search for trusted Care Providers</p>
+        <p class="footer m-0 text-center">Follow us: <i class="social-icon fab fa-facebook-square ms-3"></i>
+            <i class="social-icon fab fa-twitter-square ms-3"></i>
+            <i class="social-icon fab fa-instagram-square ms-3"></i>
+            <i class="social-icon fab fa-youtube-square ms-3"></i></p>
     </footer>
+
+    <!-- Script to fade messages - taken from Code Institute 'I Think Therefore I Blog' walkthrough -->
     <script>
         setTimeout(function () {
             let messages = document.getElementById('msg');

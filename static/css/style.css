@@ -1,12 +1,21 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Martel:wght@900&display=swap');
+
+/* Main Section */
 body {
     background-color: #e3ebee;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #1a4752;
 }
 
 .brand {
     font-family: 'Martel', serif;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-weight: 900;
     color: #1a4752;
+    padding: 1rem 1rem; 
 }
 
 #pinklogo {
@@ -17,14 +26,27 @@ body {
     background-color: #fff;
 }
 
-.dark-bg {
-    background-color: #1a4752;
-}
-
 .main-bg {
     background-color: #e3ebee;
 }
 
+/* Navigation */
+.navbar {
+    padding: 1rem 1rem;
+}
+
+.navbar ul a {
+    color: #1a4752 !important;
+    font-size: 1.4rem;
+    margin-right: 35px;
+}
+
+.navbar ul a:hover {
+    color: #e8397a !important;
+}
+
+
+/* List view */
 .card {
     border: none;
     background-color: transparent;
@@ -135,4 +157,19 @@ body {
     color: #e8397a;
     background: transparent;
     border: none;
+}
+
+/* Footer */
+.footer {
+    background-color: #1a4752;
+    font-size: 1.2rem;
+    color: #d8e3e7
+}
+
+.social-icon {
+    color: #d8e3e7
+}
+
+.social-icon:hover {
+    color: #00aab2; ;
 }
