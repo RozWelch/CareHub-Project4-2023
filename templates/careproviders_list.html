@@ -5,35 +5,39 @@
 <div class="container-fluid">
     <div class="row">
 
-        <!-- Care Provider list Column -->
+        <!-- Care Provider list view row -->
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for careprovider in careprovider_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in careprovider.provider_image.url %}
-                                <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ careprovider.provider_image.url }}">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Business Name: {{ careprovider.business_name }}</p>
-                                </div>
-                            </div>
-                            <a href="{% url  'careproviderdetail' careprovider.pk %}" class="post-link">
-                                <h2 class="card-title">{{ careprovider.business_name }}</h2>
-                                <p class="card-text">{{ careprovider.type_of_care }}</p>
-                            </a>
-                            <hr />
-                            <p class="card-text text-muted h6">{{ careprovider.likes}} <i class="far fa-heart"></i>
-                                County: {{ careprovider.county }}</p>
-                        </div>
+                <div class="col-md-2">
+                    <!-- Care Provider Image -->
+                    <div class="image-container">
+                        {% if "placeholder" in careprovider.provider_image.url %}
+                        <img class="card-img-top"
+                            src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                        {% else %}
+                        <img class="card-img-top" src=" {{ careprovider.provider_image.url }}">
+                        {% endif %}
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
+                <!-- Care Provider Details -->
+                <div class="col-md-6">
+                    <div class="card mb-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Business Name: {{ careprovider.business_name }}
+                            </div>
+                            <div class="card-body list-view-provider">
+                              <h4 class="card-title">Speciality: {{ careprovider.type_of_care }}</h4>
+                              <p class="card-text">County: {{ careprovider.county }}</p>
+                              <a href="{% url  'careproviderdetail' careprovider.pk %}" class="btn btn-primary provider-details-button">Care Provider Details</a>
+                            </div>
+                          </div>
+                    </div>
+                    <hr class="line-break">
+                    <br>
+                </div>
+                {% if forloop.counter|divisibleby:1 %}
             </div>
             <div class="row">
                 {% endif %}

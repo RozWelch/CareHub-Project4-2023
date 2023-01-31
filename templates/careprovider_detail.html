@@ -9,10 +9,12 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <!-- Care Provider Business Name -->
-                <h1 class="post-title">{{ post.business_name }}</h1>
+                <h1 class="business-name">{{ post.business_name }}</h1>
                 </h1>
+                <br>
                 <!-- Care Provider Type of care and Main contact name-->
-                <p class="post-subtitle">{{ post.type_of_care }} | {{ post.main_contact_name }}</p>
+                <p class="provider-details">Type of Care: {{ post.type_of_care }}</p>
+                <p class="provider-details">Contact Name: {{ post.main_contact_name }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->

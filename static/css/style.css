@@ -87,7 +87,23 @@ i {
     margin-right: 20px;
 }
 
-/* Next Section */
+/* Provider list view page */
+.list-view-provider {
+    background-color: #eaf0f3;
+}
+
+.provider-details-button {
+    background-color: #1a4752 !important;
+    border-color: #1a4752 !important;
+    border-radius: 12px !important;
+}
+
+.provider-details-button:hover {
+    background-color: #00aab2 !important;
+    border-color: #00aab2 !important;
+}
+
+/* Provider detail view page */
 
 .card {
     border: none;
@@ -101,9 +117,19 @@ i {
 .image-flash {
     position: absolute;
     bottom: 5%;
-    min-width: 30%;
-    left: -2px;
+    min-width: 40%;
     background-color: #00aab2;
+}
+
+.business-name {
+    margin-top: 20%;
+    margin-left: 5%;
+    font-size: 2.9rem;
+}
+
+.provider-details {
+    margin-left: 5%;
+    color: #d8e3e7;
 }
 
 .author {
@@ -140,9 +166,6 @@ i {
     height: 100%;
     width: 150%;
     background: #628389;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
     z-index: 100;
 }
 
@@ -156,15 +179,7 @@ i {
     color: #e8397a;
 }
 
-.post-title {
-    margin-top: 20%;
-    margin-left: 5%;
-}
 
-.post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
-}
 
 .btn-signup {
     background-color: #00aab2;
