@@ -4,22 +4,20 @@
 
 {% load crispy_forms_tags %}
 
-<div class="masthead">
+<div class="provider-topsection">
     <div class="container">
         <div class="row g-0">
-            <div class="col-md-6 masthead-text">
+            <div class="col-md-6 topsection-text">
                 <!-- Care Provider Business Name -->
                 <h1 class="business-name">{{ post.business_name }}</h1>
                 </h1>
-                <br>
-                <!-- Care Provider Type of care and Main contact name-->
+                <!-- Care Provider Type of care-->
                 <p class="provider-details">Type of Care: {{ post.type_of_care }}</p>
-                <p class="provider-details">Contact Name: {{ post.main_contact_name }}</p>
             </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL goes in the src attribute -->
+            <div class="d-none d-md-block col-md-6 topsection-image">
+                <!-- The featured image  -->
                 {% if "placeholder" in post.provider_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                <img src="https://res.cloudinary.com/dsuniqyyu/image/upload/v1675174805/placeholder-heart_berrzd.jpg" width="100%">
                 {% else %}
                 <img src=" {{ post.provider_image.url }}" width="100%">
                 {% endif %}
@@ -32,21 +30,20 @@
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
-                <!-- The Care Provider details goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text ">
-                    {{ post.address_line_1 | safe }}
-                </p>
+                <!-- Care Provider contact details -->
+                <p>Address: {{ post.address_line_1 }} , {{ post.county }}</p>
+                <p>Contact Name: {{ post.main_contact_name }}</p>
+                <p>Phone: {{ post.phone_number }}</p>
                 <div class="row">
 
                     <div class="col-1">
-                        <!-- The number of likes goes before the closing strong tag -->
+                        <!-- Number of likes -->
                         <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
                     </div>
                     <div class="col-1">
                         {% with post.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Our total_comments variable goes before the closing strong tag -->
+                            <!-- Total Comments -->
                             {{ total_comments }}</strong>
                         {% endwith %}
                     </div>
@@ -63,27 +60,27 @@
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
-                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+                <!-- Loop to iterate through each comment -->
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
+                        <!-- The commenter's name -->
                         {{ comment.name }}
                         <span class=" text-muted font-weight-normal">
-                            <!-- The comment's created date goes here -->
+                            <!-- Comment's created date -->
                             {{ comment.date_created }}
                         </span> wrote:
                     </p>
-                    <!-- The body of the comment goes before the | -->
+                    <!-- The body of the comment -->
                     {{ comment.comment | linebreaks }}
                 </div>
-                <!-- Our for loop ends here -->
+                <!-- For loop ends here -->
                 {% endfor %}
             </div>
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
-                <!-- For later -->
+                <!-- Comment awaiting approval message -->
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
                     Your comment is awaiting approval

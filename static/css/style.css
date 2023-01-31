@@ -39,6 +39,7 @@ body {
 
 .navbar ul a:hover {
     color: #e8397a !important;
+    text-decoration: underline;
 }
 
 /* Home page */
@@ -122,9 +123,9 @@ i {
 }
 
 .business-name {
-    margin-top: 20%;
+    margin-top: 8%;
     margin-left: 5%;
-    font-size: 2.9rem;
+    font-size: 2.8rem;
 }
 
 .provider-details {
@@ -132,13 +133,7 @@ i {
     color: #d8e3e7;
 }
 
-.author {
-    color: white;
-    margin: 4px;
-    text-transform: uppercase;
-}
-
-.masthead {
+.provider-topsection {
     margin-top: 10px;
     overflow: hidden;
     position: relative;
@@ -147,18 +142,18 @@ i {
     width: 100%;
 }
 
-.masthead-text {
+.topsection-text {
     background-color: #628389;
     color: white;
     position: relative;
 }
 
-.masthead-image {
+.topsection-image {
     position: relative;
     overflow: hidden;
 }
 
-.masthead-image:after {
+.topsection-image:after {
     content: "";
     position: absolute;
     top: 0;
@@ -169,17 +164,7 @@ i {
     z-index: 100;
 }
 
-.post-link {
-    text-decoration: none;
-    color: #628389;
-}
-
-.post-link:hover,
-.page-link {
-    color: #e8397a;
-}
-
-
+/* Next Section */
 
 .btn-signup {
     background-color: #00aab2;

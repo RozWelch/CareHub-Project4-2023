@@ -14,7 +14,7 @@
                     <div class="image-container">
                         {% if "placeholder" in careprovider.provider_image.url %}
                         <img class="card-img-top"
-                            src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                            src="https://res.cloudinary.com/dsuniqyyu/image/upload/v1675174805/placeholder-heart_berrzd.jpg">
                         {% else %}
                         <img class="card-img-top" src=" {{ careprovider.provider_image.url }}">
                         {% endif %}
@@ -28,7 +28,7 @@
                                 Business Name: {{ careprovider.business_name }}
                             </div>
                             <div class="card-body list-view-provider">
-                              <h4 class="card-title">Speciality: {{ careprovider.type_of_care }}</h4>
+                              <h4 class="card-text">Speciality: {{ careprovider.type_of_care }}  |  Phone: {{ careprovider.phone_number }}</h4>
                               <p class="card-text">County: {{ careprovider.county }}</p>
                               <a href="{% url  'careproviderdetail' careprovider.pk %}" class="btn btn-primary provider-details-button">Care Provider Details</a>
                             </div>
