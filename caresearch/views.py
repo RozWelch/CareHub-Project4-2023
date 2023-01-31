@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from django.views.generic import DetailView
 from .models import CareProvider, CareProviderComments
-from .forms import CareProviderCommentsForm
+from .forms import CareProviderCommentsForm, ProviderForm
 
 
 def IndexPage(request):
@@ -69,3 +69,28 @@ class CareProviderDetail(View):
                 "comment_form": CareProviderCommentsForm()
             },
             )
+
+class AddProvider(generic.CreateView):
+    """This view is used to allow logged in users to create a Care Provider"""
+    form_class = ProviderForm
+    template_name = 'careproviders_add_details.html'
+    success_message = "%(calculated_field)s was created successfully"
+
+    def form_valid(self, form):
+        """
+        This method is called when valid form data has been posted.
+        The signed in user is set as the author of the Care Provider.
+        """
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+    def get_success_message(self, cleaned_data):
+        """
+        This function overrides the get_success_message() method to add
+        the Care Provider name into the success message.
+        source: https://docs.djangoproject.com/en/4.0/ref/contrib/messages/
+        """
+        return self.success_message % dict(
+            cleaned_data,
+            calculated_field=self.object.business_name,
+        )
