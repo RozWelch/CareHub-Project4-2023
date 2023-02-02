@@ -71,25 +71,18 @@ class CareProviderDetail(View):
             )
 
 class AddProvider(generic.CreateView):
-    """This view is used to allow logged in users to create a Care Provider"""
+    # Allows logged in users to create a Care Provider
     form_class = ProviderForm
     template_name = 'careproviders_add_details.html'
     success_message = "%(calculated_field)s was created successfully"
 
     def form_valid(self, form):
-        """
-        This method is called when valid form data has been posted.
-        The signed in user is set as the author of the Care Provider.
-        """
-        form.instance.author = self.request.user
+        # called when a valid form is posted, sets signed in user as author
+        form.instance.careprovider_username = self.request.user
         return super().form_valid(form)
 
     def get_success_message(self, cleaned_data):
-        """
-        This function overrides the get_success_message() method to add
-        the Care Provider name into the success message.
-        source: https://docs.djangoproject.com/en/4.0/ref/contrib/messages/
-        """
+        # adds Care Provider name to the success message
         return self.success_message % dict(
             cleaned_data,
             calculated_field=self.object.careprovider_username,
