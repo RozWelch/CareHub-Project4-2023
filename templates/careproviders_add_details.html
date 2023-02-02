@@ -5,8 +5,15 @@
 
 <div class="container">
     <br>
+    {% if user.is_authenticated %}
     <h1 class="page-title">Care Providers: add your business details here</h1>
     <hr class="line-break">
+    {% else %}
+    <div class="lead mt-4">
+        Please sign up to add your business details: <a class="signup-button btn btn-primary btn-lg"
+            href="{%  url 'account_signup' %}">Sign Up</a>
+    </div>
+    {% endif %}
     <br>
     <div class="row justify-content-center ">
         {% if user.is_authenticated %}
