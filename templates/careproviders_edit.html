@@ -1,23 +1,14 @@
 {% extends "base.html" %}
-{% block title %} CareHub | Care Providers add details {% endblock %}
+{% block title %} CareHub | Care Providers edit details {% endblock %}
 {% block content %}
 {% load crispy_forms_tags %}
 
 <div class="container">
     <br>
-    {% if user.is_authenticated %}
-    <div>
-        <h1 class="page-title">Add your business details here</h1>
-        
-    </div>
-    {% else %}
-    <div class="lead mt-4">
-        Please sign up to add your business details: <a class="signup-button btn btn-primary btn-lg"
-            href="{%  url 'account_signup' %}">Sign Up</a>
-    </div>
-    {% endif %}
+    <h1 class="page-title">Care Providers: Edit your business details here</h1>
+    <hr class="line-break">
     <br>
-    <div class="row justify-content-left">
+    <div class="row justify-content-center ">
         {% if user.is_authenticated %}
         {% load cloudinary %}
         <div class="col-11 col-md-8 col-lg-6 mt-3">
@@ -25,7 +16,7 @@
             <form method="post" class="mb-5" enctype="multipart/form-data">
                 {{ form | crispy }}
                 {% csrf_token %}
-                <button type="submit" class="btn signup-btn">Submit</button>
+                <button type="submit" class="btn signup-btn">Update</button>
                 <a class="btn btn signup-btn" href="{% url 'careproviderhome' %}">Cancel</a>
             </form>
         </div>

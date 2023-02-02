@@ -1,9 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from django.views.generic import DetailView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from .models import CareProvider, CareProviderComments
-from .forms import CareProviderCommentsForm, ProviderForm
+from .forms import CareProviderCommentsForm, ProviderForm, ReviewForm
 from django.urls import reverse, reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 
 def IndexPage(request):
@@ -73,6 +74,7 @@ class CareProviderDetail(View):
 
 class AddProvider(generic.CreateView):
     # Allows logged in users to create a Care Provider
+    model = CareProvider
     success_url = reverse_lazy('careproviderhome')
     form_class = ProviderForm
     template_name = 'careproviders_add_details.html'
@@ -89,3 +91,13 @@ class AddProvider(generic.CreateView):
             cleaned_data,
             calculated_field=self.object.careprovider_username,
         )
+
+class UpdateProvider(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    # allows signed in Care Provider to update their details
+    model = CareProvider
+    success_url = reverse_lazy('careproviderhome')
+    template_name = 'careproviders_edit.html'
+    form_class = ReviewForm
+
+    def test_func(self):
+        return self.request.user == self.get_object().user or self.request.user.is_superuser()

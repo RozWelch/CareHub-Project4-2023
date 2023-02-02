@@ -30,3 +30,14 @@ class ProviderForm(forms.ModelForm):
             'county', 'phone_number', 'email',
             'disabled_parking', 'provider_image',
             ]
+
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = CareProvider
+        fields = [
+            'business_name',
+            'type_of_care',
+            'main_contact_name', 'address_line_1',
+            'county', 'phone_number', 'email',
+            'disabled_parking', 'provider_image',
+            ]

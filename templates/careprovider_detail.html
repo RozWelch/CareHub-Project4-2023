@@ -34,26 +34,18 @@
                 <p>Address: {{ post.address_line_1 }} , {{ post.county }}</p>
                 <p>Contact Name: {{ post.main_contact_name }}</p>
                 <p>Phone: {{ post.phone_number }}</p>
+
+                <a class="navbar" href="{% url 'update_provider' post.id %}">Edit Provider</a>
+
                 <div class="row">
 
-                    <div class="col-1">
-                        <!-- Number of likes -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
-                    </div>
-                    <div class="col-1">
-                        {% with post.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Total Comments -->
-                            {{ total_comments }}</strong>
-                        {% endwith %}
-                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <hr>
+            <hr class="line-break">
         </div>
     </div>
     <div class="row">
