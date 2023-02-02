@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.views.generic import DetailView
 from .models import CareProvider, CareProviderComments
 from .forms import CareProviderCommentsForm, ProviderForm
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 
 
 def IndexPage(request):
@@ -73,26 +73,9 @@ class CareProviderDetail(View):
 
 class AddProvider(generic.CreateView):
     # Allows logged in users to create a Care Provider
+    success_url = reverse_lazy('careproviderhome')
     form_class = ProviderForm
     template_name = 'careproviders_add_details.html'
-    success_message = "%(calculated_field)s was created successfully"
-
-    def form_valid(self, form):
-        # called when a valid form is posted, sets signed in user as author
-        form.instance.careprovider_username = self.request.user
-        return super().form_valid(form)
-
-    def get_success_message(self, cleaned_data):
-        # adds Care Provider name to the success message
-        return self.success_message % dict(
-            cleaned_data,
-            calculated_field=self.object.careprovider_username,
-        )
-class AddProvider(generic.CreateView):
-    # Allows logged in users to create a Care Provider
-    form_class = ProviderForm
-    template_name = 'careproviders_add_details.html'
-    # success_url=reverse('success-url')
     success_message = "%(calculated_field)s was created successfully"
 
     def form_valid(self, form):

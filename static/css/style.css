@@ -104,6 +104,13 @@ i {
     border-color: #00aab2 !important;
 }
 
+.page-link {
+    background-color: #00aab2 !important;
+    border-color: #00aab2 !important;
+    border-radius: 12px !important;
+    color: #fff !important;
+}
+
 /* Provider detail view page */
 
 .card {
@@ -179,6 +186,18 @@ i {
 }
 
 /* Next Section */
+
+.btn-signup {
+    background-color: #00aab2;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #1a4752;
+    color: #fff;
+}
 
 .link {
     color: #00aab2;
