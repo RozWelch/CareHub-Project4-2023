@@ -20,14 +20,14 @@ class CareProviderComments(SummernoteModelAdmin):
 class CareProvider(SummernoteModelAdmin):
 
     list_display = (
-        'careprovider_username', 'type_of_care', 'main_contact_name',
+        'business_name', 'type_of_care', 'main_contact_name',
         'county', 'email', 'provider_approved_status'
         )
     search_fields = [
-        'careprovider_username', 'type_of_care',
+        'business_name', 'type_of_care',
         'main_contact_name', 'email', 'county',
         ]
-    list_filter = ('provider_approved_status', 'type_of_care', 'careprovider_username')
+    list_filter = ('provider_approved_status', 'type_of_care', 'business_name')
     actions = ['approve_careprovider']
 
     def approve_careprovider(self, request, queryset):

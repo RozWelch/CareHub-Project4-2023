@@ -1,4 +1,4 @@
-from .models import CareProviderComments
+from .models import CareProviderComments, CareProvider
 from django import forms
 
 
@@ -24,7 +24,7 @@ class ProviderForm(forms.ModelForm):
     class Meta:
         model = CareProvider
         fields = [
-            'careprovider_username',
+            'business_name',
             'type_of_care',
             'main_contact_name', 'address_line_1',
             'county', 'phone_number', 'email',

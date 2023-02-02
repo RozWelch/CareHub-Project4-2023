@@ -30,12 +30,9 @@ SPECIALITY_CHOICES = (
 
 class CareProvider(models.Model):
     careprovider_username = models.CharField(max_length=200, unique=True, primary_key=True)
-<<<<<<< HEAD
     business_name = models.CharField(
-        max_length=100, blank=False, default="default_business_name"
+        max_length=100, blank=False, default="add_business_name"
         )
-=======
->>>>>>> 0bc10010ffd83fa43e2429a0bd9a60b1d81aa54e
     type_of_care = models.CharField(max_length=25,
                   choices=SPECIALITY_CHOICES,
                   default="ELDERLY CARE")
