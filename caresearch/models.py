@@ -7,8 +7,6 @@ PROVIDER_APPROVED_STATUS = ((0, "Pending"), (1, "Approved_careprovider"))
 
 class CareProvider(models.Model):
     careprovider_username = models.CharField(max_length=200, unique=True, primary_key=True)
-    password = models.CharField(max_length=20)
-    business_name = models.CharField(max_length=200, unique=True)
     type_of_care = models.CharField(max_length=250, null=True)
     main_contact_name = models.CharField(max_length=100)
     address_line_1 = models.CharField(max_length=250)

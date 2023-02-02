@@ -11,7 +11,7 @@ def IndexPage(request):
 
 class CareProviderList(generic.ListView):
     model = CareProvider
-    queryset = CareProvider.objects.filter(provider_approved_status=1).order_by('business_name')
+    queryset = CareProvider.objects.filter(provider_approved_status=1).order_by('careprovider_username')
     template_name = 'careproviders_list.html'
     paginate_by = 6
 
@@ -92,5 +92,5 @@ class AddProvider(generic.CreateView):
         """
         return self.success_message % dict(
             cleaned_data,
-            calculated_field=self.object.business_name,
+            calculated_field=self.object.careprovider_username,
         )
