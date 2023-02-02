@@ -12,7 +12,7 @@ def IndexPage(request):
 
 class CareProviderList(generic.ListView):
     model = CareProvider
-    queryset = CareProvider.objects.filter(provider_approved_status=1).order_by('careprovider_username')
+    queryset = CareProvider.objects.filter(provider_approved_status=1).order_by('business_name')
     template_name = 'careproviders_list.html'
     paginate_by = 6
 
@@ -71,6 +71,23 @@ class CareProviderDetail(View):
             },
             )
 
+class AddProvider(generic.CreateView):
+    # Allows logged in users to create a Care Provider
+    form_class = ProviderForm
+    template_name = 'careproviders_add_details.html'
+    success_message = "%(calculated_field)s was created successfully"
+
+    def form_valid(self, form):
+        # called when a valid form is posted, sets signed in user as author
+        form.instance.careprovider_username = self.request.user
+        return super().form_valid(form)
+
+    def get_success_message(self, cleaned_data):
+        # adds Care Provider name to the success message
+        return self.success_message % dict(
+            cleaned_data,
+            calculated_field=self.object.careprovider_username,
+        )
 class AddProvider(generic.CreateView):
     # Allows logged in users to create a Care Provider
     form_class = ProviderForm
