@@ -164,18 +164,21 @@ i {
     z-index: 100;
 }
 
-/* Next Section */
+/* Care Provider sign up Section */
 
-.btn-signup {
+.signup-btn {
     background-color: #00aab2;
-    color: #e3ebee;
+    color: #fff;
+    margin-top: 20px;
 }
 
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #e3ebee;
-    color: #00aab2;
+.signup-btn:hover,
+.signup-btn:active {
+    background-color: #1a4752;
+    color: #fff;
 }
+
+/* Next Section */
 
 .link {
     color: #00aab2;

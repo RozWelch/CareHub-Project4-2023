@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CareProvider, CareProviderComments, CareSeeker
+from .models import CareProvider, CareProviderComments
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -32,11 +32,3 @@ class CareProvider(SummernoteModelAdmin):
 
     def approve_careprovider(self, request, queryset):
         queryset.update(provider_approved_status=True)
-
-
-@admin.register(CareSeeker)
-class CareSeeker(SummernoteModelAdmin):
-
-    list_display = ('first_name', 'second_name', 'email', 'county')
-    search_fields = ['second_name', 'first_name', 'email', 'county']
-    list_filter = ('second_name', 'careseeker_username')

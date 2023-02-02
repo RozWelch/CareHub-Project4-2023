@@ -4,15 +4,43 @@ from cloudinary.models import CloudinaryField
 
 PROVIDER_APPROVED_STATUS = ((0, "Pending"), (1, "Approved_careprovider"))
 
+COUNTY_CHOICES = (
+    ("CARLOW", "Carlow"), ("CAVAN", "Cavan"),
+    ("CLARE", "Clare"), ("CORK", "Cork"),
+    ("DONEGAL", "Donegal"), ("DUBLIN", "Dublin"),
+    ("GALWAY", "Galway"), ("KERRY", "Kerry"),
+    ("KILDARE", "Kildare"), ("KILKENNY", "Kilkenny"),
+    ("LAOISE", "Laois"), ("LEITRIM", "Leitrim"),
+    ("LIMERICK", "Limerick"), ("LONGFORD", "Longford"),
+    ("LOUTH", "Louth"), ("MAYO", "Mayo"),
+    ("MEATH", "Meath"), ("MONAGHAN", "Monaghan"),
+    ("OFFALY", "Offaly"), ("ROSCOMMON", "Roscommon"),
+    ("SLIGO", "Sligo"), ("TIPPERARY", "Tipperary"),
+    ("WATERFORD", "Waterford"), ("WESTMEATH", "Westmeath"),
+    ("WEXFORD", "Wexford"), ("WICKLOW", "Wicklow"),
+)
+
+SPECIALITY_CHOICES = (
+    ("ELDERLYCARE", "Elderly Care"), ("GP", "General Practioner"),
+    ("CAREWORKER", "Care Worker"), ("HOMECARER", "Home Carer"),
+    ("ORTHOPEDICS", "Orthopedics"), ("OCCUPATIONAL", "Occupational Therapist"),
+    ("CHIROPODISTS", "Chiropodists"), ("PHYSIOTHERAPY", "Physiotherapy"),
+    ("SWIFTCARE", "Swift Medical Care"), ("DEMENTIA", "Dementia Support"),
+)
 
 class CareProvider(models.Model):
     careprovider_username = models.CharField(max_length=200, unique=True, primary_key=True)
-    password = models.CharField(max_length=20)
-    business_name = models.CharField(max_length=200, unique=True)
-    type_of_care = models.CharField(max_length=250, null=True)
+    business_name = models.CharField(
+        max_length=100, blank=False, default="default_business_name"
+        )
+    type_of_care = models.CharField(max_length=25,
+                  choices=SPECIALITY_CHOICES,
+                  default="ELDERLY CARE")
     main_contact_name = models.CharField(max_length=100)
     address_line_1 = models.CharField(max_length=250)
-    county = models.CharField(max_length=100)
+    county = models.CharField(max_length=9,
+                  choices=COUNTY_CHOICES,
+                  default="DUBLIN")
     phone_number = models.IntegerField()
     email = models.EmailField()
     disabled_parking = models.BooleanField()
@@ -25,21 +53,6 @@ class CareProvider(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
-
-
-class CareSeeker(models.Model):
-    careseeker_username = models.CharField(max_length=200, unique=True, primary_key=True)
-    password = models.CharField(max_length=20)
-    first_name = models.CharField(max_length=100)
-    second_name = models.CharField(max_length=100)
-    county = models.CharField(max_length=100)
-    phone_number = models.IntegerField()
-    email = models.EmailField()
-    needs_assistance = models.BooleanField()
-    disabled_parking = models.BooleanField()
-
-    def __str__(self):
-        return self.careseeker_username
 
 
 class CareProviderComments(models.Model):
