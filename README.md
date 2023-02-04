@@ -6,29 +6,75 @@ The design is aimed to be simple and easy to navigate. Accessiblity was a major 
 Link to the site here https://carehub-caresearch2023.herokuapp.com/
 
 ## Am I Responsive mockups
-![Responsive Mockup](https://github.com/RozWelch/ ADD MOCKUP HERE)
+![Responsive Mockup](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/amiresponsive.jpg)
 
 ## Contents
-* [HEADING ONE](#How-to-play)
-* [Design](#Design)
-* [Features and User experience](#Features-and-User-experience)
+* [Design and User Experience](#Design-and-User-Experience)
+* [Features](#Features)
 * [Technologies Used](#Technologies-Used)
+* [Agile Methodology](#Agile)
 * [Fixed and Unfixed Bugs](#Fixed-and-Unfixed-Bugs)
 * [Validation](#Validation)
 * [Testing](#Testing)
 * [Project Creation and Deployment](#Project-Creation-and-Deployment)
 * [Credits](#Credits)
 
-## HEADING ONE
-
-ADD TEXT HERE
-
-## Design 
+## Design and User Experience
+The site was aimed at the elderly, and their carers, so they can find information about care providers quickly and easily.
 
 Initially a flow chart was created to work out how the user navigates the site. It shows where the user should input data, how to validate that data, and what happens for a correct or incorrect entry.  
 ![Flowchart](https://github.com/RozWelch/ ADD FLOW CHART HERE)
 
-## Features and User experience
+* Accessibility:
+    * To ensure maximum user accessibility, the contrast between the background colour and text was kept to a high contrast.
+    * Font size was kept large to ensure high legibility
+    * Atkinson Hyperlegible is used as the main text font, as it is recommended as being highly legible.
+    * The overall design was kept simple and easy to follow. Call-to-action buttons were made easy to view.
+
+* Colour pallet:
+    * Colours choosen gave the site a medical feel.  
+    ![Colour Pallett](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/colour_scheme.jpg)
+
+
+* User Stories:
+* Epic: First Time User - Site design and navigation
+    * As a First time User, I can view information on the Home Page so that I can clearly see the purpose of the site and how to use it
+    * As a First Time User, I can easily understand the main purpose of the app, so that I can find the infomation I require easily
+    * As a First Time User, I can navigate the site so that I can navigate to the information I require in an effective and intuitive fashion
+    * As a First Time User,  I can view care providers, so that I can browse a list of care providers
+    * As a First Time User,  I can view care providers full profile, so that I can see all of their details and ratings 
+ 
+* Epic: Frequent User - account functions
+    * As a Frequent User, I can create a new account so that I can access all functions provided by the app
+    * As a Frequent User,  I can login and logout, so that I can access my details 
+    * As a Frequent User, I can see my login status so that I can know if I am logged in or out
+    * As a Frequent User,  I can view care providers by area or by service provided, so that I can see care providers that suit my needs 
+    * As a Frequent User,  I can update my account details, so that I can manage my account content
+    * As a Frequent User,  I can delete my account details, so that I can manage my account 
+    * As a Frequent User,  I can login and rate and comment on a care provider, so that I can review and give my feedback on their service
+    * As a Frequent User,  I can update or delete my ratings and comment on a care provider, so that I can update my reviews
+
+* Epic: Care Provider Account
+    * As a care provider,  I can create an account, so that I can add my details 
+    * As a care provider,  I can login and logout, so that I can access my details
+    * As a care provider,  I can see my login status so that I can know if I am logged in or out 
+    * As a care provider,  I can update my account details, so that I can manage my account content
+    * As a care provider,  I can delete my account details, so that I can manage my account 
+
+* Epic: Site Admin
+    * As a Site Admin,  I can approve care provider’s accounts, so that I can check they are authentic care providers
+    * As a Site Admin,  I can update or delete a care provider’s accounts, so that I can manage my care providers content
+    * As a Site Admin,  I can approve comments, so that I can filter out objectionable comments
+    * As a Site Admin, I can update comments, so that I can manage my care providers content
+    * As a Site Admin, I can delete comments, so that I can manage my care providers content
+
+* Epic: Future Features
+    * As a Frequent User,  I can login to make an appointment, so that I can make an appointment with a care provider
+    * As a Frequent User,  I can create an account using my google or facebook account, so that I can sign up quickly
+
+
+
+## Features
 
 * Home Page:
     * ADD TEXT HERE
@@ -55,6 +101,8 @@ Initially a flow chart was created to work out how the user navigates the site. 
     * ADD TEXT HERE
 * API: ADD TEXT HERE  
 * Secret Key Generator: https://djecrety.ir/
+
+## Agile
 
 ## Fixed and Unfixed Bugs
 
@@ -104,7 +152,7 @@ The following commands were used throughout the project:
 
 ## Credits
 
-ADD TEXT HERE
+All images used are from www.freepix.com
 
 ## Acknowledgements
 Thanks to my mentor, my facilitator, my fellow students on Slack, tutoring support and to my friends for helping test the site.
