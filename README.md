@@ -29,11 +29,18 @@ Initially a flow chart was created to work out how the user navigates the site. 
     * To ensure maximum user accessibility, the contrast between the background colour and text was kept to a high contrast.
     * Font size was kept large to ensure high legibility
     * Atkinson Hyperlegible is used as the main text font, as it is recommended as being highly legible.
-    * The overall design was kept simple and easy to follow. Call-to-action buttons were made easy to view.
+    * The overall design was kept simple and easy to follow. Call-to-action buttons were made easy to view and locate on the page.
 
 * Colour pallet:
-    * Colours choosen gave the site a medical feel.  
+    * The main colours choosen gave the site a medical feel, with warm accent colours to give an approchable feel.  
     ![Colour Pallett](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/colour_scheme.jpg)
+
+* Wireframes:
+    <details>
+    <summary>Home Page Wireframe</summary>
+    <br>
+    This is how you dropdown.
+    </details>
 
 
 * User Stories:
@@ -91,16 +98,31 @@ Initially a flow chart was created to work out how the user navigates the site. 
 
 
 * Future Features: 
-    * ADD TEXT HERE
-    * ADD TEXT HERE
-
+    * Make an appointment, so that a logged in user can make an appointment with a care provider
+    * Create an account using a google or facebook account, so that a user can sign up quickly
+s
 ## Technologies Used
-
-* Languages: Python 
+* Languages: Python, HTML, CSS, Javascript
 * Libraries:  
-    * ADD TEXT HERE
-* API: ADD TEXT HERE  
-* Secret Key Generator: https://djecrety.ir/
+    * Django: Main python framework 
+    * Django-allauth: authentication library used to create user accounts
+    * Elephant PostgreSQL: database
+    * Heroku: cloud based platform to deploy the site
+    * Balsamiq: to draw wireframes
+    * Chrome Dev Tools - for testing responsiveness, performance and for debugging
+    * Font Awesome: icons on home page
+    * GitHub: version control and agile Kanban boards
+    * Google Fonts: fonts used on site
+    * Favicon: to create a favicon for the site
+    * Summernote: WYSIWYG editor to for users to create comments 
+    * Crispy Forms: for Django forms
+    * Cloudinary: the image hosting service used to upload images
+    * Bootstrap: CSS Framework for developing the site
+    * Secret Key Generator: https://djecrety.ir/
+* Validators:
+    * W3C: validate html and css
+    * PEP8: validate python code
+    * Jshint: validate javascript
 
 ## Agile
 
