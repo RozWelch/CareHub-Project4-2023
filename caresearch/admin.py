@@ -20,8 +20,8 @@ class CareProviderComments(SummernoteModelAdmin):
 class CareProvider(SummernoteModelAdmin):
 
     list_display = (
-        'business_name', 'type_of_care', 'main_contact_name',
-        'county', 'email', 'provider_approved_status'
+       'careprovider_username', 'business_name', 'type_of_care', 'main_contact_name',
+        'county', 'email', 'description', 'provider_approved_status'
         )
     search_fields = [
         'business_name', 'type_of_care',
