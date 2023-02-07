@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import CareProvider, CareProviderComments
 from .forms import CareProviderCommentsForm, ProviderForm, ReviewForm
 from django.urls import reverse, reverse_lazy
@@ -90,6 +90,16 @@ class UpdateProvider(UpdateView):
     success_url = reverse_lazy('careproviderhome')
     template_name = 'careproviders_edit.html'
     form_class = ReviewForm
+
+    def test_func(self):
+        return self.request.user == self.get_object().author or self.request.user.is_superuser()
+
+class DeleteProvider(DeleteView):
+    # allows signed in Care Provider to delete their details
+    model = CareProvider
+    success_url = reverse_lazy('careproviderhome')
+    template_name = 'careproviders_delete.html'
+    form_class = DeleteForm
 
     def test_func(self):
         return self.request.user == self.get_object().author or self.request.user.is_superuser()
