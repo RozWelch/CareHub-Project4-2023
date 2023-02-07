@@ -4,7 +4,6 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from .models import CareProvider, CareProviderComments
 from .forms import CareProviderCommentsForm, ProviderForm, ReviewForm
 from django.urls import reverse, reverse_lazy
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 
 def IndexPage(request):
@@ -85,7 +84,7 @@ class AddProvider(generic.CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
-class UpdateProvider(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class UpdateProvider(UpdateView):
     # allows signed in Care Provider to update their details
     model = CareProvider
     success_url = reverse_lazy('careproviderhome')
