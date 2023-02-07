@@ -99,7 +99,6 @@ class DeleteProvider(DeleteView):
     model = CareProvider
     success_url = reverse_lazy('careproviderhome')
     template_name = 'careproviders_delete.html'
-    form_class = DeleteForm
 
     def test_func(self):
         return self.request.user == self.get_object().author or self.request.user.is_superuser()
