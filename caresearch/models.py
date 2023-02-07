@@ -33,6 +33,8 @@ class CareProvider(models.Model):
     business_name = models.CharField(
         max_length=100, blank=False, default="add_business_name"
         )
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="provider")
     type_of_care = models.CharField(max_length=25,
                   choices=SPECIALITY_CHOICES,
                   default="ELDERLY CARE")
@@ -45,6 +47,7 @@ class CareProvider(models.Model):
     email = models.EmailField()
     disabled_parking = models.BooleanField()
     provider_image = CloudinaryField('image', default='placeholder')
+    description = models.TextField(blank=True, null=True)
     provider_approved_status = models.IntegerField(choices=PROVIDER_APPROVED_STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='provider_likes', blank=True)
 

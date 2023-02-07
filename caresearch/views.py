@@ -82,15 +82,8 @@ class AddProvider(generic.CreateView):
 
     def form_valid(self, form):
         # called when a valid form is posted, sets signed in user as author
-        form.instance.careprovider_username = self.request.user
+        form.instance.author = self.request.user
         return super().form_valid(form)
-
-    def get_success_message(self, cleaned_data):
-        # adds Care Provider name to the success message
-        return self.success_message % dict(
-            cleaned_data,
-            calculated_field=self.object.careprovider_username,
-        )
 
 class UpdateProvider(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     # allows signed in Care Provider to update their details
