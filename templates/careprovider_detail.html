@@ -34,9 +34,22 @@
                 <p>Address: {{ post.address_line_1 }} , {{ post.county }}</p>
                 <p>Contact Name: {{ post.main_contact_name }}</p>
                 <p>Phone: {{ post.phone_number }}</p>
-
+                <p>Description: {{ post.description }}</p>
                 <div class="row">
-
+                {% if request.user.is_authenticated and post.author == request.user %}
+                    <span>
+                        <a class="action-btn btn btn-info" href="{% url 'update_provider' post.pk %}"
+                            aria-label="edit-provider">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </span>
+                    <span>
+                        <!-- <a class="action-btn btn btn-info" href=""
+                            aria-label="delete-provider">
+                            <i class="fas fa-times"></i>
+                        </a> -->
+                    </span>
+                    {% endif %}
                 </div>
             </div>
         </div>
