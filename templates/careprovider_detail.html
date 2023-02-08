@@ -34,7 +34,7 @@
                 <p>Address: {{ post.address_line_1 }} , {{ post.county }}</p>
                 <p>Contact Name: {{ post.main_contact_name }}</p>
                 <p>Phone: {{ post.phone_number }}</p>
-                <p>Description: {{ post.description }}</p>
+                <p>Description: {{ post.description | safe }}</p>
                 <div class="row">
                 {% if request.user.is_authenticated and post.author == request.user %}
                     <span>
