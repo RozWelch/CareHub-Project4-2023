@@ -37,18 +37,14 @@
                 <p>Description: {{ post.description | safe }}</p>
                 <div class="row">
                 {% if request.user.is_authenticated and post.author == request.user %}
-                    <span>
-                        <a class="action-btn btn btn-info" href="{% url 'update_provider' post.pk %}"
-                            aria-label="edit-provider">
-                            <i class="fas fa-edit"></i>
-                        </a>
-                    </span>
-                    <span>
-                        <a class="action-btn btn btn-info" href="{% url 'delete_provider' post.pk %}"
-                            aria-label="delete-provider">
-                            <i class="fas fa-times"></i>
-                        </a>
-                    </span>
+                    <div>
+                        <a class="signup-button btn btn-primary btn-lg" href="{% url 'update_provider' post.pk %}"
+                            aria-label="edit-provider">Edit</a>
+
+                        <a class="signup-button btn btn-primary btn-lg" href="{% url 'delete_provider' post.pk %}"
+                            aria-label="delete-provider">Delete</a>
+
+                    </div>
                     {% endif %}
                 </div>
             </div>
