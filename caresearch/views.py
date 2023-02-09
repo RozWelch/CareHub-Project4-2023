@@ -4,6 +4,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .models import CareProvider, CareProviderComments
 from .forms import CareProviderCommentsForm, ProviderForm, ReviewForm
 from django.urls import reverse, reverse_lazy
+from django.contrib import messages
 
 
 def IndexPage(request):
@@ -77,11 +78,12 @@ class AddProvider(generic.CreateView):
     success_url = reverse_lazy('careproviderhome')
     form_class = ProviderForm
     template_name = 'careproviders_add_details.html'
-    success_message = "%(calculated_field)s was created successfully"
+    success_message = "Your care provider was created successfully and is awaiting approval"
 
     def form_valid(self, form):
         # called when a valid form is posted, sets signed in user as author
         form.instance.author = self.request.user
+        messages.success(self.request, self.success_message)
         return super().form_valid(form)
 
 class UpdateProvider(UpdateView):
@@ -90,6 +92,7 @@ class UpdateProvider(UpdateView):
     success_url = reverse_lazy('careproviderhome')
     template_name = 'careproviders_edit.html'
     form_class = ReviewForm
+    success_message = "Your care provider has been successfully updated"
 
     def test_func(self):
         return self.request.user == self.get_object().author or self.request.user.is_superuser()
@@ -99,6 +102,7 @@ class DeleteProvider(DeleteView):
     model = CareProvider
     success_url = reverse_lazy('careproviderhome')
     template_name = 'careproviders_delete.html'
+    success_message = "Your care provider has been successfully deleted"
 
     def test_func(self):
         return self.request.user == self.get_object().author or self.request.user.is_superuser()
