@@ -39,9 +39,26 @@ Initially a flow chart was created to work out how the user navigates the site. 
     <details>
     <summary>Home Page Wireframe</summary>
     <br>
-    This is how you dropdown.
+    ![Home Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/homepage.jpg)
     </details>
 
+    <details>
+    <summary>Care Providers list Wireframe</summary>
+    <br>
+    ![Home Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/providerlist.jpg)
+    </details>
+
+    <details>
+    <summary>Care Providers details Wireframe</summary>
+    <br>
+    ![Home Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/providerdetails.jpg)
+    </details>
+    
+    <details>
+    <summary>Add Care Provider page Wireframe</summary>
+    <br>
+    ![Home Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/addprovider.jpg)
+    </details>
 
 * User Stories:
 * Epic: First Time User - Site design and navigation
