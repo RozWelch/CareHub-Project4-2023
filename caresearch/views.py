@@ -110,7 +110,9 @@ class UpdateProvider(UpdateView):
     success_message = "Your care provider has been successfully updated"
 
     def test_func(self):
-        return self.request.user == self.get_object().author or self.request.user.is_superuser()
+        return self.request.user == (
+            self.get_object().author or self.request.user.is_superuser()
+        )
         messages.success(self.request, self.success_message)
 
 
@@ -122,5 +124,7 @@ class DeleteProvider(DeleteView):
     success_message = "Your care provider has been successfully deleted"
 
     def test_func(self):
-        return self.request.user == self.get_object().author or self.request.user.is_superuser()
+        return self.request.user == (
+            self.get_object().author or self.request.user.is_superuser()
+        )
         messages.success(self.request, self.success_message)
