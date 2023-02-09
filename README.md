@@ -37,6 +37,8 @@ Initially a flow chart was created to work out how the user navigates the site. 
 
 * Wireframes:
     <details>
+    <summary>Balsamiq wireframes</summary>
+    
     * Home Page Wireframe
     ![Home Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/homepage.jpg)
 
