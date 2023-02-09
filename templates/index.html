@@ -9,6 +9,10 @@
             {% if user.is_authenticated %}
             <div class="signup-area col-md-5 col-lg-7 hero-text-outer text-left">
                 <h1 class="mt-4 mb-2 hero-text">Welcome back to CareHub</h1>
+                <div class="lead mt-4">
+                    Find Care Providers here: <a class="signup-button btn btn-primary btn-lg"
+                        href="{%  url 'careproviderhome' %}">Find Care</a>
+                </div>
             </div>
             {% else %}
             <div class="signup-area col-md-5 col-lg-7 text-left">

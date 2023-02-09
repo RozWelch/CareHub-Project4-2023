@@ -185,7 +185,7 @@ i {
     color: #fff;
 }
 
-/* Next Section */
+/* Buttons Section */
 
 .btn-signup {
     background-color: #00aab2;
@@ -231,9 +231,10 @@ i {
 }
 
 .social-icon {
-    color: #d8e3e7
+    color: #d8e3e7 !important;
+    margin-left: 20px !important;
 }
 
 .social-icon:hover {
-    color: #00aab2; ;
+    color: #00aab2; 
 }
