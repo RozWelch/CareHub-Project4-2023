@@ -37,28 +37,17 @@ Initially a flow chart was created to work out how the user navigates the site. 
 
 * Wireframes:
     <details>
-    <summary>Home Page Wireframe</summary>
-    <br>
+    * Home Page Wireframe
     ![Home Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/homepage.jpg)
-    </details>
 
-    <details>
-    <summary>Care Providers list Wireframe</summary>
-    <br>
-    ![Home Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/providerlist.jpg)
-    </details>
+    * Care Providers list Wireframe 
+    ![|List Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/providerlist.jpg)
 
-    <details>
-    <summary>Care Providers details Wireframe</summary>
-    <br>
-    ![Home Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/providerdetails.jpg)
-    </details>
+    * Care Providers details Wireframe
+    ![Detail Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/providerdetails.jpg)
     
-    <details>
-    <summary>Add Care Provider page Wireframe</summary>
-    <br>
-    ![Home Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/addprovider.jpg)
-    </details>
+    * Add Care Provider page Wireframe
+    ![Add Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/addprovider.jpg)
 
 * User Stories:
 * Epic: First Time User - Site design and navigation
@@ -147,6 +136,8 @@ s
 
 * Fixed bugs:
     * When initial commit was made, it failed as I had divergent branches, there was remote work that was not local. I found the answer on Slack. I integrated the remote changes by using the 'git config pull.rebase false' command to tell git how to merge the changes 'git pull' command to get the changes from the local branch, and then it was possible to 'git push' my commit.
+
+    * When site was deployed to Heroku, the css file was not linking. After speaking with tutor support, a workaround was that in the env.py file add a var DEV,  with a value of '1', then DEBUG was set to DEBUG = 'DEV' in os.environ. Then disable collect static variable was removed from Heroku vars. The deployed site then ran with css working.
 
 * No known unfixed bugs
 
