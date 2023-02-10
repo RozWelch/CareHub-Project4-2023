@@ -118,19 +118,19 @@ s
     * Heroku: cloud based platform to deploy the site
     * Balsamiq: to draw wireframes
     * Chrome Dev Tools - for testing responsiveness, performance and for debugging
-    * Font Awesome: icons on home page
+    * Font Awesome: icons used on the site
     * GitHub: version control and agile Kanban boards
-    * Google Fonts: fonts used on site
+    * Google Fonts: for fonts used on site
     * Favicon: to create a favicon for the site
-    * Summernote: WYSIWYG editor to for users to create comments 
+    * Summernote: WYSIWYG editor - for users to create comments 
     * Crispy Forms: for Django forms
-    * Cloudinary: the image hosting service used to upload images
+    * Cloudinary: image hosting service 
     * Bootstrap: CSS Framework for developing the site
     * Secret Key Generator: https://djecrety.ir/
 * Validators:
-    * W3C: validate html and css
-    * PEP8: validate python code
-    * Jshint: validate javascript
+    * W3C: to validate html and css
+    * PEP8: to validate Python code
+    * Jshint: to validate Javascript
 
 ## Agile
 
