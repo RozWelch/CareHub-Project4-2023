@@ -6,7 +6,7 @@ The design is aimed to be simple and easy to navigate. Accessiblity was a major 
 Link to the site here https://carehub-caresearch2023.herokuapp.com/
 
 ## Am I Responsive mockups
-![Responsive Mockup](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/amiresponsive.jpg)
+![Responsive Mockup](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/amiresponsive.jpg)
 
 ## Contents
 * [Design and User Experience](#Design-and-User-Experience)
@@ -33,23 +33,23 @@ Initially a flow chart was created to work out how the user navigates the site. 
 
 * Colour pallet:
     * The main colours choosen gave the site a medical feel, with warm accent colours to give an approchable feel.  
-    ![Colour Pallett](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/colour_scheme.jpg)
+    ![Colour Pallett](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/colour_scheme.jpg)
 
 * Wireframes:
     <details>
     <summary>Balsamiq wireframes</summary>
     
     * Home Page Wireframe
-    ![Home Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/homepage.jpg)
+    ![Home Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/homepage.jpg)
 
     * Care Providers list Wireframe 
-    ![|List Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/providerlist.jpg)
+    ![|List Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/providerlist.jpg)
 
     * Care Providers details Wireframe
-    ![Detail Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/providerdetails.jpg)
+    ![Detail Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/providerdetails.jpg)
     
     * Add Care Provider page Wireframe
-    ![Add Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/docs/readmeimages/addprovider.jpg)
+    ![Add Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/addprovider.jpg)
 
 * User Stories:
 * Epic: First Time User - Site design and navigation
@@ -137,6 +137,9 @@ s
 ## Fixed and Unfixed Bugs
 
 * Fixed bugs:
+    * When a success message was added to the DeleteProvider view, it was not showing up. A bug in Django which has yet to be fixed meant Message Mixins didn't work with Delete Views.
+    The workaround was found on Stack: https://stackoverflow.com/a/42656041
+
     * When initial commit was made, it failed as I had divergent branches, there was remote work that was not local. I found the answer on Slack. I integrated the remote changes by using the 'git config pull.rebase false' command to tell git how to merge the changes 'git pull' command to get the changes from the local branch, and then it was possible to 'git push' my commit.
 
     * When site was deployed to Heroku, the css file was not linking. After speaking with tutor support, a workaround was that in the env.py file add a var DEV,  with a value of '1', then DEBUG was set to DEBUG = 'DEV' in os.environ. Then disable collect static variable was removed from Heroku vars. The deployed site then ran with css working.

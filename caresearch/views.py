@@ -93,7 +93,7 @@ class AddProvider(generic.CreateView):
     template_name = 'careproviders_add_details.html'
     success_message = (
         "Care provider created successfully and is awaiting approval"
-    )
+        )
 
     def form_valid(self, form):
         # called when a valid form is posted, sets signed in user as author
@@ -108,25 +108,30 @@ class UpdateProvider(SuccessMessageMixin, UpdateView):
     success_url = reverse_lazy('careproviderhome')
     template_name = 'careproviders_edit.html'
     form_class = ReviewForm
-    success_message = "Your care provider has been successfully updated"
-    # messages.success(request, 'Your care provider has been successfully updated')
-
-    # success_message = "Your care provider has been successfully updated"
-    # messages.success(self.request, self.success_message)
+    success_message = (
+        "Your provider: %(business_name) has been successfully updated"
+        )
 
     def test_func(self):
         return self.request.user == (
             self.get_object().author or self.request.user.is_superuser()
         )
-        
+
 
 class DeleteProvider(DeleteView):
     # allows signed in Care Provider to delete their details
     model = CareProvider
     success_url = reverse_lazy('careproviderhome')
     template_name = 'careproviders_delete.html'
+    success_message = (
+        "Your Care Provider details have been successfully deleted"
+        )
 
     def test_func(self):
         return self.request.user == (
             self.get_object().author or self.request.user.is_superuser()
         )
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(DeleteProvider, self).delete(request, *args, **kwargs)
