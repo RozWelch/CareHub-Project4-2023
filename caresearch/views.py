@@ -7,6 +7,7 @@ from .models import CareProvider, CareProviderComments
 from .forms import CareProviderCommentsForm, ProviderForm, ReviewForm
 from django.urls import reverse, reverse_lazy
 from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 def IndexPage(request):
@@ -101,30 +102,31 @@ class AddProvider(generic.CreateView):
         return super().form_valid(form)
 
 
-class UpdateProvider(UpdateView):
+class UpdateProvider(SuccessMessageMixin, UpdateView):
     # allows signed in Care Provider to update their details
     model = CareProvider
     success_url = reverse_lazy('careproviderhome')
     template_name = 'careproviders_edit.html'
     form_class = ReviewForm
     success_message = "Your care provider has been successfully updated"
+    # messages.success(request, 'Your care provider has been successfully updated')
+
+    # success_message = "Your care provider has been successfully updated"
+    # messages.success(self.request, self.success_message)
 
     def test_func(self):
         return self.request.user == (
             self.get_object().author or self.request.user.is_superuser()
         )
-        messages.success(self.request, self.success_message)
-
+        
 
 class DeleteProvider(DeleteView):
     # allows signed in Care Provider to delete their details
     model = CareProvider
     success_url = reverse_lazy('careproviderhome')
     template_name = 'careproviders_delete.html'
-    success_message = "Your care provider has been successfully deleted"
 
     def test_func(self):
         return self.request.user == (
             self.get_object().author or self.request.user.is_superuser()
         )
-        messages.success(self.request, self.success_message)
