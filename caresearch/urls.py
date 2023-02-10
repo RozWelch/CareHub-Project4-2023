@@ -10,6 +10,12 @@ urlpatterns = [
     path('care-provider-details/<pk>', views.CareProviderDetail.as_view(),
          name='careproviderdetail'),
     path('addcareprovider/', AddProvider.as_view(), name='add_provider'),
-    path('editcareprovider/<pk>', UpdateProvider.as_view(), name='update_provider'),
-    path('deletecareprovider/<pk>', DeleteProvider.as_view(), name='delete_provider')
+    path(
+        'editcareprovider/<pk>', UpdateProvider.as_view(),
+        name='update_provider'
+        ),
+    path(
+        'deletecareprovider/<pk>',
+        DeleteProvider.as_view(), name='delete_provider'
+        )
 ]
