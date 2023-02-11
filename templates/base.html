@@ -1,10 +1,14 @@
 {% load static %}
 
 <!DOCTYPE html>
+<html lang="en">
 <html class="h-100">
 
 <head>
     <title>Carehub</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Find trusted care providers in Ireland">
+    <meta name="keywords" content="care providers, elderly care, medical care">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -36,13 +40,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarText">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% if request.path == '/'%}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'careproviderhome' %}">Find Care</a>
+                        <a class="nav-link {% if request.path == '/list'%}active{% endif %}" aria-current="page" href="{% url 'careproviderhome' %}">Find Care</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'add_provider' %}">For Providers</a>
+                        <a class="nav-link {% if request.path == '/addcareprovider/'%}active{% endif %}" aria-current="page" href="{% url 'add_provider' %}">For Providers</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">

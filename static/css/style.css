@@ -238,3 +238,8 @@ i {
 .social-icon:hover {
     color: #00aab2; 
 }
+
+.nav-link.active {
+    color: #e8397a !important;
+    text-decoration: underline;
+}
