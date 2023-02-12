@@ -42,6 +42,17 @@ body {
     text-decoration: underline;
 }
 
+.nav-link.active {
+    color: #e8397a !important;
+    text-decoration: underline;
+}
+
+.logged-in-name {
+    color: #00aab2 !important;
+    font-size: 1.3rem !important;
+    margin: 0px !important;
+}
+
 /* Home page */
 
 .signup-button {
@@ -89,6 +100,12 @@ i {
 }
 
 /* Provider list view page */
+
+.card-header {
+    background-color: #1a4752 !important;
+    color: #fff !important;
+}
+
 .list-view-provider {
     background-color: #eaf0f3;
 }
@@ -239,7 +256,3 @@ i {
     color: #00aab2; 
 }
 
-.nav-link.active {
-    color: #e8397a !important;
-    text-decoration: underline;
-}
