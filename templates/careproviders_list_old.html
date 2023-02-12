@@ -13,10 +13,10 @@
                     <!-- Care Provider Image -->
                     <div class="image-container">
                         {% if "placeholder" in careprovider.provider_image.url %}
-                        <img class="card-img-top" alt="placeholder image"
+                        <img class="card-img-top"
                             src="https://res.cloudinary.com/dsuniqyyu/image/upload/v1675174805/placeholder-heart_berrzd.jpg">
                         {% else %}
-                        <img class="card-img-top" alt="care provider image" src=" {{ careprovider.provider_image.url }}">
+                        <img class="card-img-top" src=" {{ careprovider.provider_image.url }}">
                         {% endif %}
                     </div>
                 </div>

@@ -43,12 +43,12 @@ body {
 }
 
 .nav-link.active {
-    color: #e8397a !important;
+    color: #bc3063 !important;
     text-decoration: underline;
 }
 
 .logged-in-name {
-    color: #00aab2 !important;
+    color: #3c7278 !important;
     font-size: 1.3rem !important;
     margin: 0px !important;
 }
@@ -56,7 +56,7 @@ body {
 /* Home page */
 
 .signup-button {
-    background-color: #e8397a !important;
+    background-color: #bc3063 !important;
     border-color: #d1356e !important;
     border-radius: 18px !important;
     margin-left: 10px;
@@ -82,7 +82,7 @@ h2 {
 
 .icons-heading {
     font-size: 1.8rem;
-    color: #00aab2;
+    color: #009298;
 }
 
 .icons-text {
