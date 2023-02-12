@@ -17,9 +17,10 @@
             <div class="d-none d-md-block col-md-6 topsection-image">
                 <!-- The featured image  -->
                 {% if "placeholder" in post.provider_image.url %}
-                <img src="https://res.cloudinary.com/dsuniqyyu/image/upload/v1675174805/placeholder-heart_berrzd.jpg" width="100%">
+                <img src="https://res.cloudinary.com/dsuniqyyu/image/upload/v1675174805/placeholder-heart_berrzd.jpg" 
+                alt="care provider image" width="100%">
                 {% else %}
-                <img src=" {{ post.provider_image.url }}" width="100%">
+                <img src=" {{ post.provider_image.url }}" alt="placeholder image" width="100%">
                 {% endif %}
             </div>
         </div>
@@ -57,7 +58,7 @@
     </div>
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
-            <h3>Comments:</h3>
+            <h2>Comments:</h2>
             <div class="card-body">
                 <!-- Loop to iterate through each comment -->
                 {% for comment in comments %}
