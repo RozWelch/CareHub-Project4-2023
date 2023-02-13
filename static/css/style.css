@@ -101,6 +101,11 @@ i {
 
 /* Provider list view page */
 
+.nomargin {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
 .card-header {
     background-color: #1a4752 !important;
     color: #fff !important;
