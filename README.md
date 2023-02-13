@@ -54,8 +54,10 @@ Initially a flow chart was created to work out how the user navigates the site. 
 * Database Drawing:
     <details>
     <summary>Database schema</summary>
-    * Database 
-    ![Home Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/database_schema_drawing.jpg)
+
+    * Database
+    
+    ![Database](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/database_schema_drawing.jpg)
 
 * User Stories:
 * Epic: First Time User - Site design and navigation
@@ -101,12 +103,11 @@ Initially a flow chart was created to work out how the user navigates the site. 
 
 ![Mainscreen](https://github.com/RozWelch/ADD TEXT HERE)
     
-* The user is asked to select a difficulty level
-    * UX: as a first time or returning user, I want to easily select a difficulty level
+* Add text
 
 ![Navigation Bar](https://github.com/RozWelch/ADD TEXT HERE
 
-    * UX: as a first time or returning user, I want to ADD TEXT HERE
+    * Add text
 
 
 * Future Features: 
