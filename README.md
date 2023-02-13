@@ -51,6 +51,12 @@ Initially a flow chart was created to work out how the user navigates the site. 
     * Add Care Provider page Wireframe
     ![Add Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/addprovider.jpg)
 
+* Database Drawing:
+    <details>
+    <summary>Database schema</summary>
+    * Database 
+    ![Home Page](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/database_schema_drawing.jpg)
+
 * User Stories:
 * Epic: First Time User - Site design and navigation
     * As a First time User, I can view information on the Home Page so that I can clearly see the purpose of the site and how to use it
@@ -73,8 +79,6 @@ Initially a flow chart was created to work out how the user navigates the site. 
     * As a care provider,  I can create an account, so that I can add my details 
     * As a care provider,  I can login and logout, so that I can access my details
     * As a care provider,  I can see my login status so that I can know if I am logged in or out 
-    * As a care provider,  I can update my account details, so that I can manage my account content
-    * As a care provider,  I can delete my account details, so that I can manage my account 
 
 * Epic: Site Admin
     * As a Site Admin,  I can approve care provider’s accounts, so that I can check they are authentic care providers
@@ -111,7 +115,7 @@ Initially a flow chart was created to work out how the user navigates the site. 
 s
 ## Technologies Used
 * Languages: Python, HTML, CSS, Javascript
-* Libraries:  
+* Other technologies used:  
     * Django: Main python framework 
     * Django-allauth: authentication library used to create user accounts
     * Elephant PostgreSQL: database
@@ -127,6 +131,7 @@ s
     * Cloudinary: image hosting service 
     * Bootstrap: CSS Framework for developing the site
     * Secret Key Generator: https://djecrety.ir/
+    * Database schema drawing toool: https://drawsql.app
 * Validators:
     * W3C: to validate html and css
     * PEP8: to validate Python code
@@ -137,6 +142,9 @@ s
 ## Fixed and Unfixed Bugs
 
 * Fixed bugs:
+
+    * The care providers list was misaligned, the loop was in the wrong place, it had an opening div before it, and closing div after, leaving the styling crossing over into the next iteration, causing the next iteration to be moved out by 12px each time. It was resolved by moving the closing div tag.
+
     * When a success message was added to the DeleteProvider view, it was not showing up. A bug in Django which has yet to be fixed meant Message Mixins didn't work with Delete Views.
     The workaround was found on Stack: https://stackoverflow.com/a/42656041
 
