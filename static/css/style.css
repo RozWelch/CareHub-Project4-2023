@@ -198,7 +198,7 @@ i {
 .signup-btn {
     background-color: #1a4752;
     color: #fff;
-    margin-top: 20px;
+    margin: 15px, 0 !important;
 }
 
 .signup-btn:hover,
@@ -212,7 +212,7 @@ i {
 .btn-signup {
     background-color: #1a4752;
     color: #fff;
-    margin-top: 20px;
+    margin: 15px !important;
 }
 
 .btn-signup:hover,
