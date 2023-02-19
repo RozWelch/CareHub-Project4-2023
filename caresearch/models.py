@@ -28,6 +28,8 @@ SPECIALITY_CHOICES = (
     ("SWIFTCARE", "Swift Medical Care"), ("DEMENTIA", "Dementia Support"),
 )
 
+CAREPROVIDER_TYPE = ((0, "Careseeker"), (1, "Careprovider"))
+
 
 class CareProvider(models.Model):
     careprovider_username = (
@@ -83,3 +85,10 @@ class CareProviderComments(models.Model):
 
     def __str__(self):
         return f"Comment {self.comment} by {self.name}"
+
+
+class UserAccess(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    careprovider_type = (models.IntegerField(
+        choices=CAREPROVIDER_TYPE, default=0)
+        )

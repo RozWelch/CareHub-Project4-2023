@@ -97,21 +97,33 @@ Initially a flow chart was created to work out how the user navigates the site. 
 
 ## Features
 
-* Home Page:
-    * ADD TEXT HERE
-    * UX: as a first time user I want to ADD TEXT HERE
+    <details>
+    <summary>Header and footer</summary>
+    ![header](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/header_logo_nav.jpg)
 
-![Mainscreen](https://github.com/RozWelch/ADD TEXT HERE)
-    
-* Add text
+    * Logo: This logo is positioned in the top left of the navigation bar. The logo is linked to the home page for ease of navigation for the user.
+    * Navigation Bar: The navigation bar is present at the top of every page and includes links to other pages.
+When logged in, the user will see an icon and their user name. If not logged in they will see a link to sign up or log in.
+The navigation bar is fully responsive, collapsing into a hamburger menu for smaller devices. The links show the user their current page by displaying a different colour and an underline, this is also used when the user hovers over a link so they can see what page they will navigate to.
+    ![footer](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/footer.jpg)
+    * Footer: The footer section has links to Carehub's Facebook, Instagram, Twitter and Youtube pages.
+These open in a separate browser window to avoid taking the user away from the site.
 
-![Navigation Bar](https://github.com/RozWelch/ADD TEXT HERE
+    <details>
+    <summary>Home page</summary>
+    ![cta_in](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/cta_section_loggedin.jpg)
+    ![cta_out](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/cta_section_notloggedin.jpg)
+    * The call to action section shows a relevant image, and a call to action: sign up if not logged in, or find care if already logged in.
 
-    * Add text
+    ![about](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/about_section.jpg)
+    * The about section gives a brief description of who the site is for and what type of care a user can find there. 
 
 
-* Future Features: 
-    * Make an appointment, so that a logged in user can make an appointment with a care provider
+    <details>
+    <summary>Future Features</summary>
+    * Have different user types for a care provider or a care seeker
+    * Care providers can be filtered by county or by speciality
+    * Bookmarks section, so logged in user can have a page of frequently used providers
     * Create an account using a google or facebook account, so that a user can sign up quickly
 s
 ## Technologies Used
