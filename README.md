@@ -96,12 +96,9 @@ Initially a flow chart was created to work out how the user navigates the site. 
 
 
 ## Features
-
-    <details>
-    <summary>Header and footer</summary>
+* Header and footer
     ![header](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/header_logo_nav.jpg)
-
-    * Logo: This logo is positioned in the top left of the navigation bar. The logo is linked to the home page for ease of navigation for the user.
+    * Logo: This logo is positioned in the top left of the navigation bar. The logo is linked to the home page so the user can easily navigate back to the home page.
     * Navigation Bar: The navigation bar is present at the top of every page and includes links to other pages.
 When logged in, the user will see an icon and their user name. If not logged in they will see a link to sign up or log in.
 The navigation bar is fully responsive, collapsing into a hamburger menu for smaller devices. The links show the user their current page by displaying a different colour and an underline, this is also used when the user hovers over a link so they can see what page they will navigate to.
@@ -109,23 +106,23 @@ The navigation bar is fully responsive, collapsing into a hamburger menu for sma
     * Footer: The footer section has links to Carehub's Facebook, Instagram, Twitter and Youtube pages.
 These open in a separate browser window to avoid taking the user away from the site.
 
-    <details>
-    <summary>Home page</summary>
+* Home page
     ![cta_in](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/cta_section_loggedin.jpg)
     ![cta_out](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/cta_section_notloggedin.jpg)
-    * The call to action section shows a relevant image, and a call to action: sign up if not logged in, or find care if already logged in.
+    * The call to action section shows a relevant image, and a easy to locate call to action button: sign up button if not logged in, or find care button if already logged in.
 
     ![about](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/about_section.jpg)
     * The about section gives a brief description of who the site is for and what type of care a user can find there. 
 
+* Account pages
+    ![signin](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/cta_section_loggedin.jpg)
+    * Allauth was used to create the Sign up / Log in / Log out functions. A success message is displayed when the user has signed in / signed out / or created and account sucessfully.
 
-    <details>
-    <summary>Future Features</summary>
-    * Have different user types for a care provider or a care seeker
+* Future Features
+    * Have different user types for a care provider or a care seeker, so they can be restricted to certain areas of the website
     * Care providers can be filtered by county or by speciality
-    * Bookmarks section, so logged in user can have a page of frequently used providers
-    * Create an account using a google or facebook account, so that a user can sign up quickly
-s
+    * Bookmarks page, so logged in user can bookmark providers, and see a page of their bookmarked providers
+
 ## Technologies Used
 * Languages: Python, HTML, CSS, Javascript
 * Other technologies used:  
@@ -170,25 +167,13 @@ s
 ## Validation 
 
 ADD TEXT HERE
-* When tested the website generally recommended pep8online.com was down. 
-    * As a workaround, a PEP8 validator was used in the Gitpod Workspace directly by following these steps:
-    * Run the command pip3 install pycodestyle (Note that this extension may already be installed, in which case this command will do nothing.)
-    * In my workspace, press Ctrl+Shift+P (or Cmd+Shift+P on Mac).
-    * Type the word linter into the search bar that appears, and click on Python: Select Linter from the filtered results.
-    * Select pycodestyle from the list.
-    * PEP8 errors would be underlined in red, as well as being listed in the PROBLEMS tab beside your terminal.
+* Add
 
-* Fixed: Extra spaces in code. Comments incorrectly added. Removed extra trailing spaces as hilighted.   
+* Fixed: Add  
 
 ## Testing
 
-* Tested on the local terminal, and tested the deployed site on Google Chrome on a mac and also a laptop
-
-* Home Page:
-    * Tested: ADD TEXT HERE
-
-* Navigation:
-    * Tested: ADD TEXT HERE
+* Add link
 
 ## Project Creation and Deployment
 
@@ -207,8 +192,8 @@ The following commands were used throughout the project:
     * On successful deploy, I clicked on 'View app' and got a successful deploy message
 
 ## Credits
-
-All images used are from www.freepix.com
+* Code Institue's 'I think therefore I blog' tutorial
+* All images used are from www.freepix.com
 
 ## Acknowledgements
 Thanks to my mentor, my facilitator, my fellow students on Slack, tutoring support and to my friends for helping test the site.
