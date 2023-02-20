@@ -270,6 +270,14 @@ i {
 /* For smaller screens (less than 1250px) */
 
 @media screen and (max-width: 1250px) {
+.business-name {
+        margin-top: 5%;
+        margin-left: 3%;
+        font-size: 2.2rem;
+    }
+.provider-details {
+        margin-left: 3%;
+    }
 
 }
 
@@ -296,8 +304,8 @@ i {
     }
 }
 
-.provider-topsection {
-    height: 22vh;
+h1 {
+    font-size: 1.2rem;
 }
 
 
