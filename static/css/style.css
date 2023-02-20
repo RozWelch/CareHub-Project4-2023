@@ -133,6 +133,10 @@ i {
     color: #fff !important;
 }
 
+.card-img-top {
+    min-width: 200px !important;
+}
+
 /* Provider detail view page */
 
 .card {
@@ -261,3 +265,51 @@ i {
     color: #00aab2; 
 }
 
+/* Media Queries */
+
+/* For smaller screens (less than 1250px) */
+
+@media screen and (max-width: 1250px) {
+
+}
+
+
+/* For medium size devices (tablets, less than 992px) */
+
+@media screen and (max-width: 991.9px) {
+.brand {
+        padding: .2rem .2rem; 
+    }
+
+.signup-button {
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+
+.icons-heading {
+        font-size: 1.6rem;
+        color: #009298;
+    }
+
+.icons-text {
+        font-size: 1.1rem;
+    }
+}
+
+.provider-topsection {
+    height: 22vh;
+}
+
+
+/* For small devices (less than 420px */
+
+@media screen and (max-width: 420px) {
+h2 {
+    font-size: 1.7rem;
+}
+
+.footer {
+    font-size: 1rem;
+}
+
+}
