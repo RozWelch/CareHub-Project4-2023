@@ -22,9 +22,6 @@ Link to the site here https://carehub-caresearch2023.herokuapp.com/
 ## Design and User Experience
 The site was aimed at the elderly, and their carers, so they can find information about care providers quickly and easily.
 
-Initially a flow chart was created to work out how the user navigates the site. It shows where the user should input data, how to validate that data, and what happens for a correct or incorrect entry.  
-![Flowchart](https://github.com/RozWelch/ ADD FLOW CHART HERE)
-
 * Accessibility:
     * To ensure maximum user accessibility, the contrast between the background colour and text was kept to a high contrast.
     * Font size was kept large to ensure high legibility

@@ -197,6 +197,10 @@ i {
     z-index: 100;
 }
 
+.detail-image {
+    width: 100%;
+}
+
 /* Care Provider sign up Section */
 
 .signup-btn {

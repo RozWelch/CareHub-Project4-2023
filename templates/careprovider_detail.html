@@ -12,15 +12,15 @@
                 <h1 class="business-name">{{ post.business_name }}</h1>
                 </h1>
                 <!-- Care Provider Type of care-->
-                <p class="provider-details">Type of Care: {{ post.type_of_care }}</p>
+                <p class="provider-details">Care type: {{ post.type_of_care }}</p>
             </div>
-            <div class="d-none d-md-block col-md-6 topsection-image">
+            <div class="col-md-6 topsection-image">
                 <!-- The featured image  -->
                 {% if "placeholder" in post.provider_image.url %}
                 <img src="https://res.cloudinary.com/dsuniqyyu/image/upload/v1675174805/placeholder-heart_berrzd.jpg" 
-                alt="care provider image" width="100%">
+                alt="care provider image" class="detail-image">
                 {% else %}
-                <img src=" {{ post.provider_image.url }}" alt="placeholder image" width="100%">
+                <img src=" {{ post.provider_image.url }}" alt="placeholder image" class="detail-image">
                 {% endif %}
             </div>
         </div>
