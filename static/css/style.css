@@ -304,11 +304,6 @@ i {
     }
 }
 
-h1 {
-    font-size: 1.2rem;
-}
-
-
 /* For small devices (less than 420px */
 
 @media screen and (max-width: 420px) {
