@@ -33,6 +33,10 @@ body {
     background-color: #e3ebee;
 }
 
+h1 {
+    font-size: 2.3rem;
+}
+
 /* Navigation */
 .navbar {
     padding: 1rem 1rem;
@@ -191,7 +195,17 @@ i {
 .topsection-image {
     position: relative;
     overflow: hidden;
+}
+
+.topsection-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 100%;
+    height: 100%;
     width: 100%;
+    background: #628389;
+    z-index: 100;
 }
 
 .detail-image {
@@ -227,7 +241,7 @@ i {
 }
 
 .link {
-    color: #00aab2;
+    color: #bc3063;
     text-decoration: none;
 }
 
@@ -272,12 +286,12 @@ i {
 
 @media screen and (max-width: 1250px) {
 .business-name {
-        margin-top: 1%;
-        margin-left: 3%;
-        font-size: 2.2rem;
+    margin-top: 1%;
+    margin-left: 3%;
+    font-size: 2.2rem;
     }
 .provider-details {
-        margin-left: 3%;
+    margin-left: 3%;
     }
 
 }
