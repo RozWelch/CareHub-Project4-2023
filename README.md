@@ -16,7 +16,7 @@ Link to the site here https://carehub-caresearch2023.herokuapp.com/
 * [Fixed and Unfixed Bugs](#Fixed-and-Unfixed-Bugs)
 * [Validation](#Validation)
 * [Testing](#Testing)
-* [Project Creation and Deployment](#Project-Creation-and-Deployment)
+* [Project Deployment](#Project-Creation-and-Deployment)
 * [Credits](#Credits)
 
 ## Design and User Experience
@@ -207,11 +207,6 @@ ADD TEXT HERE
 ## Project Creation and Deployment
 
 The project was created in Git Hub using the Code Institute template.
-
-The following commands were used throughout the project:
-* git add . - This command was used to add files to the staging area before committing.
-* git commit -m "I add commit message here" - This command was used to to commit changes to the local repository.
-* git push - This command is used to push all committed changes to the GitHub repository. 
 
 * Deployment from Heroku:    
     * Navigate to Deploy tab 
