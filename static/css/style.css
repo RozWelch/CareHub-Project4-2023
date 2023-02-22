@@ -220,6 +220,14 @@ i {
     width: 100%;
 }
 
+.commentform {
+    margin-top: 1.3em;
+}
+
+.comments {
+    padding: 10px;
+}
+
 /* Care Provider sign up Section */
 
 .signup-btn {

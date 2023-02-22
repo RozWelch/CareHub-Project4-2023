@@ -61,7 +61,7 @@
             <div class="card-body">
                 <!-- Loop to iterate through each comment -->
                 {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
+                <div class="comments">
                     <p class="font-weight-bold">
                         <!-- The commenter's name -->
                         {{ comment.name }}
@@ -89,7 +89,7 @@
 
                 <h3>Leave a comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
+                <form method="post" class="commentform" autocomplete="off">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
