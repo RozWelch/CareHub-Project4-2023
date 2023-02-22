@@ -2,11 +2,18 @@
 The website is aimed at people require care services, and carers who may be searching for the information for them.
 The app provides a list of Care Providers, their services information and contact details. Registered users are able to rate their services, and also leave comments on the service they received.
 The design is aimed to be simple and easy to navigate. Accessiblity was a major factor in the site design. 
+The CRUD functionality is available on the front end. A signed in user can create a Care Provider listing. Admin approves a listing. The signed in user can then update or delete the provider that they created, the buttons will be available to the creator user on the Care Provider detail page. The list of Care Providers can be viewed by users.
 
 Link to the site here https://carehub-caresearch2023.herokuapp.com/
 
 ## Am I Responsive mockups
-![Responsive Mockup](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/amiresponsive.jpg)
+* Used Am I Responsive website to show the main pages on different devices:
+    <details>
+    <summary>Carehub mockups</summary>
+
+    ![home](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/amiresponsive.jpg)
+    ![list](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/list_page.jpg)
+    ![details](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/details.jpg)
 
 ## Contents
 * [Design and User Experience](#Design-and-User-Experience)
@@ -241,7 +248,7 @@ These open in a separate browser window to avoid taking the user away from the s
 * Lighthouse:
     <details>
     <summary>Score was 100% for Accessibility</summary>
-    
+
     Score was 100% for Accessibility, which was important for the site's target users. On first running through Lighthouse, the score was lower, but after adjusting the colour contrast on CTA buttons, the score was brought to 100%. Other scores were close to, or at 100%.
     ![homepage](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/validations/homepage.jpg) 
     ![findcare](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/validations/find_care.jpg) 
@@ -260,12 +267,24 @@ These open in a separate browser window to avoid taking the user away from the s
 
 The project was created in Git Hub using the Code Institute template.
 
-* Deployment from Heroku:    
-    * Navigate to Deploy tab 
-    * Click on Github for deployment method
-    * Search and connect to app name (CareHub-Project4-2023)
-    * Scroll to bottom and click 'Deploy Branch'
-    * On successful deploy, I clicked on 'View app' and got a successful deploy message
+* Deployment from Heroku:  
+    * To create a Pipfile: In the terminal enter the command: pip3 freeze › requirements.txt, and a file with all requirements will be created.
+
+    * Login to Heroku (https://www.heroku.com/) or create an account
+    * On the main page, click the 'New' button labelled New in the top right corner, select 'Create New App' from the menu
+    * Choose a name and select your region, then click on the 'Create App' button
+    * Click Reveal Config Vars and add Cloudinary, Database URL, SECRET KEY = (add value here), PORT = 8000, DISABLE_COLLECTSTATIC = 1
+    * Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes
+    * Scroll to the top of the page and choose the Deploy tab
+    * Select Github as the deployment method
+    * Search for the repository name and click the connect button
+    * Scroll to the bottom of the deploy page and select the preferred deployment type
+    * Click 'Enable Automatic Deploys' if you wish to automatically deploy when you push updates to Github
+
+* Forking this repository
+     * Locate the repository at this link https://carehub-caresearch2023.herokuapp.com/
+     * At the top right of the repository, select 'Fork' from the menu
+     * A copy of the repository is now created
 
 ## Credits
 * Code Institue's 'I think therefore I blog' tutorial
