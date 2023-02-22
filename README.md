@@ -155,6 +155,7 @@ These open in a separate browser window to avoid taking the user away from the s
     * If logged in, and the user is the author of the Care Provider, they can see the delete button. If clicked, they will be asked to confirm they wish to delete the provider, or they can cancel. If they click delete, the user will receive a message to say the provider has successfully been deleted.
 
 * Future Features
+    * Logged in User can 'like' a Care Provider, number of likes can be displayed 
     * Have different user types for a care provider or a care seeker, so they can be restricted to certain areas of the website
     * Care providers can be filtered by county or by speciality
     * Bookmarks page, so logged in user can bookmark providers, and see a page of their bookmarked providers
@@ -185,10 +186,57 @@ These open in a separate browser window to avoid taking the user away from the s
     * Python: Code Institute pep8 validator: https://pep8ci.herokuapp.com/
 
 ## Agile
+* Github projects kanban boards were used, see link to final board here: https://github.com/users/RozWelch/projects/6/views/1
+* The project was then divided in 6 sprints:
+* Sprint 1:
+    <details>
+    <summary>Administration functionality</summary>
+
+    ![sprint1](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/sprint1_AdmininProgress.jpg)
+
+* Sprint 2:
+    <details>
+    <summary>Add Care Providers list and details views</summary>
+
+    ![sprint2](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/sprint_2_addviews.jpg)
+
+* Sprint 3:
+    <details>
+    <summary>Add Commenting functionality</summary>
+
+    ![sprint3](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/sprint_3_addlikesandcomments-.jpg)
+
+* Sprint 4:
+    <details>
+    <summary>Home Page and site navigation</summary>
+
+    ![sprint4](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/sprint4-homepage-sitenav-mainpurpose.jpg)
+
+* Sprint 5:
+    <details>
+    <summary>User login and logout functionality</summary>
+
+    ![sprint5](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/sprint5_create.jpg)
+
+* Sprint 6:
+    <details>
+    <summary>Care Provider CRUD functionality</summary>
+
+    ![sprint6](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/sprint_6_update_delete.jpg)
+
+* Final Sprint:
+    <details>
+    <summary>Tidy up and final review</summary>
+    After a meeting with my mentor, some of the tasks were moved to future features, due to time contraints at this stage.
+
+    ![sprintfinal](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/final_sprint.jpg)
+
 
 ## Fixed and Unfixed Bugs
 
 * Fixed bugs:
+
+    * The comments form would re-submit a comment if the back button was used. To prevent this autocomplete="off" was added to the form in the html file.
 
     * The care providers list was misaligned, the loop was in the wrong place, it had an opening div before it, and closing div after, leaving the styling crossing over into the next iteration, causing the next iteration to be moved out by 12px each time. It was resolved by moving the closing div tag.
 
@@ -274,8 +322,7 @@ The project was created in Git Hub using the Code Institute template.
     * Choose Github as the deployment method, then select the correct repository, and click the connect button
     * Select the Settings tab
     * Click Reveal Config Vars
-    * Add Config Vars settings for Cloudinary URL, Database URL, SECRET KEY, PORT = 8000, as per image (secure information has been hidden from the image)
-    ![config](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/configvars.jpg) 
+    * Add Config Vars settings with values: SECRET_KEY =(add value here), CLOUDINARY_URL, DATABASE_URL, PORT = 8000, DISABLE_COLLECTSTATIC = 1
     * Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes
     * Scroll to the bottom of the deploy page and select the preferred deployment type
     * Click 'Enable Automatic Deploys' if you wish to automatically deploy when you push updates to Github
