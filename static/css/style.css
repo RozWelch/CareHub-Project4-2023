@@ -148,6 +148,14 @@ i {
     min-width: 200px !important;
 }
 
+.col-md-2 {
+    padding: 0 !important;;
+}
+
+.col-md-6 {
+    padding: 0 !important;;
+}
+
 /* Provider detail view page */
 
 .card {
@@ -316,6 +324,18 @@ i {
 .icons-text {
     font-size: 1.1rem;
     }
+}
+
+.card-img-top {
+    min-width: 150px !important;
+}
+
+.business-name {
+    margin-bottom: .1rem !important;
+}
+
+.provider-details {
+    margin-bottom: .1rem !important;
 }
 
 /* For small devices (less than 420px */
