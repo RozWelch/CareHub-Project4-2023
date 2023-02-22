@@ -268,27 +268,34 @@ These open in a separate browser window to avoid taking the user away from the s
 The project was created in Git Hub using the Code Institute template.
 
 * Deployment from Heroku:  
-    * To create a Pipfile: In the terminal enter the command: pip3 freeze › requirements.txt, and a file with all requirements will be created.
-
     * Login to Heroku (https://www.heroku.com/) or create an account
-    * On the main page, click the 'New' button labelled New in the top right corner, select 'Create New App' from the menu
+    * On the main page, click the 'New' button in the top right corner, select 'Create New App' from the menu
     * Choose a name and select your region, then click on the 'Create App' button
-    * Click Reveal Config Vars and add Cloudinary, Database URL, SECRET KEY = (add value here), PORT = 8000, DISABLE_COLLECTSTATIC = 1
+    * Choose Github as the deployment method, then select the correct repository, and click the connect button
+    * Select the Settings tab
+    * Click Reveal Config Vars
+    * Add Config Vars settings for Cloudinary URL, Database URL, SECRET KEY, PORT = 8000, as per image (secure information has been hidden from the image)
+    ![config](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/configvars.jpg) 
     * Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes
-    * Scroll to the top of the page and choose the Deploy tab
-    * Select Github as the deployment method
-    * Search for the repository name and click the connect button
     * Scroll to the bottom of the deploy page and select the preferred deployment type
     * Click 'Enable Automatic Deploys' if you wish to automatically deploy when you push updates to Github
 
-* Forking this repository
+* Forking the repository
      * Locate the repository at this link https://carehub-caresearch2023.herokuapp.com/
      * At the top right of the repository, select 'Fork' from the menu
      * A copy of the repository is now created
 
+* Cloning the repository
+     * Locate the repository at this link https://carehub-caresearch2023.herokuapp.com/
+     * Under 'Code', there is cloning options: HTTPS, SSH, GitHub CLI. Click the prefered cloning option, and then copy the link provided.
+     * Open the terminal
+     * In the terminal change the current working directory to where you wish to put the cloned directory
+     * Type: 'git clone', then paste the URL already copied from GitHub earlier
+     * Type 'enter' to create the local clone
+
 ## Credits
 * Code Institue's 'I think therefore I blog' tutorial
-* All images used are from www.freepix.com
+* All images used are from Freepix: www.freepix.com
 
 ## Acknowledgements
 Thanks to my mentor, my facilitator, my fellow students on Slack, tutoring support and to my friends for helping test the site.
