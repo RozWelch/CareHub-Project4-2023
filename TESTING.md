@@ -3,13 +3,11 @@
 - [Browser and Devices Tests](#browser-tests)
 - [Manual Tests](#manual-tests)
   * [Home Page](#home-page)
-  * [Site Navigation](#site-nav)
-  * [Care Providers List](#providers-list)
-  * [Care Providers Detail](#providers-detail)
-  * [Add a Care Provider](#add-provider)
-  * [Update a Care Provider](#update-provider)
-  * [Confirm Delete a Care Provider](#confirm-delete-provider)
-  * [Django All Auth Pages](#django-all-auth-pages)
+  * [Site Navigation](#site-navigation)
+  * [Care Providers List](#care-providers-list)
+  * [Care Providers Detail](#care-providers-detail)
+  * [Add a Care Provider](#add-a-care-provider)
+  * [Django AllAuth Pages](#django-allauth-pages)
 
 ## User Story Testing
 
@@ -206,4 +204,99 @@
 | Logout Link           | Click      | Opens logout confirm page                                          | Pass      |
 | Logout Link           | Display    | Only visible if user is already logged in                          | Pass      |
 | Footer Nav:           |            |                                                                    |           |
-| Soical media links    | Click      | Opens social media page in new tab                                 | Pass      |
+| Social media links    | Click      | Opens social media page in new tab                                 | Pass      |
+
+### Care Providers List
+| List page       | Action                  | Expected Result                                                    | Pass/Fail |
+|-----------------|-------------------------|--------------------------------------------------------------------|-----------|
+| List View       | Summary details display | Display correct image, business name, phone and county             | Pass      |
+| Details button  | Click                   | Clicking 'Care Provider Detials' button brings you to details page | Pass      |
+| Details button  | Hover                   | Button changes colour on hover                                     | Pass      |
+| List View       | List ordered            | Recipes are sorted by Business name alphabetically                 | Pass      |
+
+### Care Providers Detail
+| List page         | Action                | Expected Result                                                    | Pass/Fail |
+|-------------------|-----------------------|--------------------------------------------------------------------|-----------|
+| Detail View       | Details displayed     | Display correct image, business name, and contact details etc      | Pass      |
+| Detail View       | Comments displayed    | Display any comments made about that provider                      | Pass      |
+| Comments Box      | Display if logged in  | Leave a comment box will be displayed if user is logged in.        | Pass      |
+| Comments Box      | Submit                | Commenting and clicking submit will add a provider comment         | Pass      |
+| Edit Button       | Display               | Edit button will only display if logged in user is the author      | Pass      |
+| Edit Button       | Click                 | Bring user to page pre populated with details to edit              | Pass      |
+| Edit Update Button| Click                 | Updates that provider's details                                    | Pass      |
+| Edit Update Button| Click                 | Returns to list page, display success message update was successful| Pass      |
+| Edit Cancel Button| Click                 | Returns to list page                                               | Pass      |
+| Delete Button     | Display               | Delete button will only display if logged in user is the author    | Pass      |
+| Delete Button     | Click                 | Asks to confirm deletion: Delete or Cancel button displayed        | Pass      |
+| Delete Button     | Confirm Delete Click  | Display success message delete was successful, return to list      | Pass      |
+| Delete Button     | Cancel Delete Click   | Return to list view                                                | Pass      |
+
+
+### Add a Care Provider
+| Form Page         | Action                | Expected Result                                                     | Pass/Fail |
+|-------------------|-----------------------|---------------------------------------------------------------------|-----------|
+| Add form          | Display               | Displayed only if user is logged in                                 | Pass      |
+| Add form          | Input blank           | Error message, form doesn't submit until all required fields filled | Pass      |
+| Add form          | Add username          | If username alredy exists, error message and form won't submit      | Pass      |
+| Add image         | Click                 | Opens device storage                                                | Pass      |
+| Add image         | No image uploaded     | Placeholder image is used instead                                   | Pass      |
+| Cancel button     | Click                 | Redirected to list view                                             | Pass      |
+| Add form          | Valid form submitted  | Success message - form submitted and awaiting admin approval        | Pass      |
+| Add form          | Valid form submitted  | Redirected to Care Providers list page                              | Pass      |
+
+### Django AllAuth Pages
+| Element                    | Action                                    | Expected Result                            | Pass/Fail |
+|----------------------------|-------------------------------------------|--------------------------------------------|-----------|
+| LOGIN                      |                                           |                                            |           |
+| Login link                 | Click                                     | Redirect to login page                     | Pass      |
+| Username field             | Not filled in                             | Form won't submit when button clicked      | Pass      |
+| Username field             | Not filled in                             | Error message displayed                    | Pass      |
+| Username field             | Insert wrong username                     | Form won't submit when button clicked      | Pass      |
+| Username field             | Insert wrong username                     | Error message displayed                    | Pass      |
+| Password field             | Not filled in                             | On submit: form won't submit               | Pass      |
+| Password field             | Not filled in                             | Error message displayed                    | Pass      |
+| Password field             | Insert wrong password                     | On submit: form won't submit               | Pass      |
+| Password field             | Insert wrong password                     | Error message displayed                    | Pass      |
+| Sign in button             | Click with correct login                  | Form submit                                | Pass      |
+| Sign in button             | Click with correct login                  | Redirected to home page                    | Pass      |
+| Sign in button             | Click with correct login                  | Success message confirming login diplayed  | Pass      |
+| Sign in button             | Click with correct login                  | Success message fades after 4 seconds      | Pass      |
+|                            |                                           |                                            |           |
+| Log Out Confirmation       |                                           |                                            |           |
+| Logout button              | Click                                     | Redirect to homepage                       | Pass      |
+| Logout button              | Click                                     | Success message confirming log out appears | Pass      |
+| Logout button              | Click                                     | Success message fades after 4 seconds      | Pass      |
+
+| Sign Up                    |                                           |                                            |           |
+| Log in link                | Click                                     | Redirect to login page                     | Pass      |
+| Username field             | Leave empty                               | On submit: form won't submit               | Pass      |
+| Username field             | Leave empty                               | Error message displays                     | Pass      |
+| Username field             | Insert correct format                     | On submit: form submit                     | Pass      |
+| Username field             | Insert duplicate username                 | On submit: form won't submit               | Pass      |
+| Username field             | Insert duplicate username                 | Error message displays                     | Pass      |
+| Email field                | Insert incorrect format                   | On submit: form won't submit               | Pass      |
+| Email field                | Insert incorrect format                   | Error message displays                     | Pass      |
+| Email field                | Insert correct format                     | On submit: form submit                     | Pass      |
+| Email field                | Leave empty                               | On submit: form submit                     | Pass      |
+| Email field                | Insert duplicate email                    | On submit: form won't submit               | Pass      |
+| Email field                | Insert duplicate email                    | Error message displays                     | Pass      |
+| Password field             | Insert incorrect format                   | On submit: form won't submit               | Pass      |
+| Password field             | Insert incorrect format                   | Error message displays                     | Pass      |
+| Password field             | Passwords don't match                     | On submit: form won't submit               | Pass      |
+| Password field             | Passwords don't match                     | Error message displays                     | Pass      |
+| Password field             | Insert correct format and passwords match | On submit: form submit                     | Pass      |
+| Sign Up button(form valid) | Click                                     | Form submit                                | Pass      |
+| Sign Up button(form valid) | Click                                     | Redirect to home page                      | Pass      |
+| Sign Up button(form valid) | Click                                     | Success message confirming login appears   | Pass      |
+| Sign Up button(form valid) | Click                                     | Success message fades after 4 seconds      | Pass      |
+
+
+
+
+
+
+
+
+
+
+
