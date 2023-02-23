@@ -311,8 +311,7 @@ These open in a separate browser window to avoid taking the user away from the s
 
 ## Testing
 
-* Link to testing and results: 
-![testing](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/TESTING.md) 
+* Link to testing and results: https://github.com/RozWelch/CareHub-Project4-2023/blob/main/TESTING.md
 
 ## Project Creation and Deployment
 
