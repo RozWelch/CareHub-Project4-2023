@@ -168,9 +168,14 @@
 ## Browser and Devices Tests
 * Browsers: tested on Google Chrome and Safari browsers with no issues noted.
 * Devices: viewed on the following devices to check responsiveness: iPhone 11 Pro, iPhone 14, Samsung Galaxy, iPad, iMac pro 15in screen, iMac 27in screen
-* Chrome Developer tools: checked multiple devices to check responsiveness
-
+* Chrome Developer tools: checked multiple device sizes to check responsiveness
 
 ## Manual Tests
 
 ### Home Page
+| Hero section Buttons  | Action   | Expected Result                   | Pass/Fail |
+|-----------------------|----------|-----------------------------------|-----------|
+| Sign up Button        | Click    | Open Sign up form page            | Pass      |
+| Sign up Button        |  Display | Not visible if user is logged in  | Pass      |
+| Find Care Button      | Click    | Opens List of Care Providers page | Pass      |
+| Find Care Button      | Display  | Only visible if user is logged in | Pass      |

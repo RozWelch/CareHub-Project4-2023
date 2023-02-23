@@ -96,7 +96,7 @@ The site was aimed at the elderly, and their carers, so they can find informatio
 * Epic: Future Features
     * Logged in User can 'like' a Care Provider, number of likes can be displayed 
     * Have different user types for a care provider or a care seeker, so they can be restricted to certain areas of the website
-    * Care providers can be filtered by county or by speciality
+    * Care providers can be filtered by county or by speciality or by disabled parking availability
     * Bookmarks page, so logged in user can bookmark providers, and see a page of their bookmarked providers
 
 
