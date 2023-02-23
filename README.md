@@ -69,33 +69,35 @@ The site was aimed at the elderly, and their carers, so they can find informatio
     * As a First Time User, I can easily understand the main purpose of the app, so that I can find the infomation I require easily
     * As a First Time User, I can navigate the site so that I can navigate to the information I require in an effective and intuitive fashion
     * As a First Time User,  I can view care providers, so that I can browse a list of care providers
-    * As a First Time User,  I can view care providers full profile, so that I can see all of their details and ratings 
+    * As a First Time User,  I can view care providers full profile, so that I can see all of their details and comments
  
 * Epic: Frequent User - account functions
     * As a Frequent User, I can create a new account so that I can access all functions provided by the app
     * As a Frequent User,  I can login and logout, so that I can access my details 
     * As a Frequent User, I can see my login status so that I can know if I am logged in or out
-    * As a Frequent User,  I can view care providers by area or by service provided, so that I can see care providers that suit my needs 
-    * As a Frequent User,  I can update my account details, so that I can manage my account content
-    * As a Frequent User,  I can delete my account details, so that I can manage my account 
-    * As a Frequent User,  I can login and rate and comment on a care provider, so that I can review and give my feedback on their service
-    * As a Frequent User,  I can update or delete my ratings and comment on a care provider, so that I can update my reviews
+    * As a Frequent User,  I can view care providers and service provided, so that I can see care providers that suit my needs 
+    * As a Frequent User,  I can login and comment on a care provider, so that I can give my feedback on their service
 
 * Epic: Care Provider Account
-    * As a care provider,  I can create an account, so that I can add my details 
     * As a care provider,  I can login and logout, so that I can access my details
     * As a care provider,  I can see my login status so that I can know if I am logged in or out 
+    * As a care provider,  I can create an account, so that I can add my details 
+    * As a care provider,  I can update my account details, so that I can manage my account content
+    * As a care provider,  I can delete my account details, so that I can manage my account 
 
 * Epic: Site Admin
     * As a Site Admin,  I can approve care provider’s accounts, so that I can check they are authentic care providers
+    * As a Site Admin,  I can add a care provider account, so that I can add to the site content's list of care providers
     * As a Site Admin,  I can update or delete a care provider’s accounts, so that I can manage my care providers content
     * As a Site Admin,  I can approve comments, so that I can filter out objectionable comments
     * As a Site Admin, I can update comments, so that I can manage my care providers content
     * As a Site Admin, I can delete comments, so that I can manage my care providers content
 
 * Epic: Future Features
-    * As a Frequent User,  I can login to make an appointment, so that I can make an appointment with a care provider
-    * As a Frequent User,  I can create an account using my google or facebook account, so that I can sign up quickly
+    * Logged in User can 'like' a Care Provider, number of likes can be displayed 
+    * Have different user types for a care provider or a care seeker, so they can be restricted to certain areas of the website
+    * Care providers can be filtered by county or by speciality
+    * Bookmarks page, so logged in user can bookmark providers, and see a page of their bookmarked providers
 
 
 
@@ -309,7 +311,8 @@ These open in a separate browser window to avoid taking the user away from the s
 
 ## Testing
 
-* Add link
+* Link to testing and results: 
+![testing](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/TESTING.md#L1) 
 
 ## Project Creation and Deployment
 
@@ -328,17 +331,17 @@ The project was created in Git Hub using the Code Institute template.
     * Click 'Enable Automatic Deploys' if you wish to automatically deploy when you push updates to Github
 
 * Forking the repository
-     * Locate the repository at this link https://carehub-caresearch2023.herokuapp.com/
+     * Locate the repository at this link https://github.com/RozWelch/CareHub-Project4-2023
      * At the top right of the repository, select 'Fork' from the menu
      * A copy of the repository is now created
 
 * Cloning the repository
-     * Locate the repository at this link https://carehub-caresearch2023.herokuapp.com/
-     * Under 'Code', there is cloning options: HTTPS, SSH, GitHub CLI. Click the prefered cloning option, and then copy the link provided.
+     * Locate the repository at this link https://github.com/RozWelch/CareHub-Project4-2023
+     * Under 'Local', there is cloning options: HTTPS, SSH, GitHub CLI. Click the prefered cloning option, and then copy the link provided.
      * Open the terminal
      * In the terminal change the current working directory to where you wish to put the cloned directory
      * Type: 'git clone', then paste the URL already copied from GitHub earlier
-     * Type 'enter' to create the local clone
+     * Press Enter. Your local clone will be created.
 
 ## Credits
 * Code Institue's 'I think therefore I blog' tutorial
