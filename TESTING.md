@@ -176,6 +176,34 @@
 | Hero section Buttons  | Action   | Expected Result                   | Pass/Fail |
 |-----------------------|----------|-----------------------------------|-----------|
 | Sign up Button        | Click    | Open Sign up form page            | Pass      |
-| Sign up Button        |  Display | Not visible if user is logged in  | Pass      |
+| Sign up Button        | Display  | Not visible if user is logged in  | Pass      |
 | Find Care Button      | Click    | Opens List of Care Providers page | Pass      |
 | Find Care Button      | Display  | Only visible if user is logged in | Pass      |
+
+### Site Navigation
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| Carehub site logo     | Click      | Links to back to home page                                         | Pass      |
+| Home Link             | Click      | Redirect to home                                                   | Pass      |
+| Find Care Link        | Click      | Opens Find Care Providers List Page                                | Pass      |
+| For Providers Link    | Click      | Opens Add Provider Form                                            | Pass      |
+| Register Link         | Click      | Open Sign Up page                                                  | Pass      |
+| Register Link         | Display    | Not visible if user is logged in                                   | Pass      |
+| Login Link            | Click      | Opens login page                                                   | Pass      |
+| Login Link            | Display    | Not visible if user is already logged in                           | Pass      |
+| Logout Link           | Click      | Opens logout confirm page                                          | Pass      |
+| Logout Link           | Display    | Only visible if user is already logged in                          | Pass      |
+| All Nav Links         | Current    | Link is different colour and underlined on current page            | Pass      |
+| All Nav Links         | Hover      | Link is different colour and underlined                            | Pass      |    
+| Mobile Nav:           |            |                                                                    |           |
+| Carehub site logo     | Click      | Links to back to home page                                         | Pass      |
+| Find Care Link        | Click      | Opens Find Care Providers List Page                                | Pass      |
+| For Providers Link    | Click      | Opens Add Provider Form                                            | Pass      |
+| Register Link         | Click      | Open Sign Up page                                                  | Pass      |
+| Register Link         | Display    | Not visible if user is logged in                                   | Pass      |
+| Login Link            | Click      | Opens login page                                                   | Pass      |
+| Login Link            | Display    | Not visible if user is already logged in                           | Pass      |
+| Logout Link           | Click      | Opens logout confirm page                                          | Pass      |
+| Logout Link           | Display    | Only visible if user is already logged in                          | Pass      |
+| Footer Nav:           |            |                                                                    |           |
+| Soical media links    | Click      | Opens social media page in new tab                                 | Pass      |
