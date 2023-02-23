@@ -266,7 +266,6 @@
 | Sign out button            | Click                                     | Redirects to homepage                      | Pass      |
 | Sign out button            | Click                                     | Success message confirming log out displays| Pass      |
 | Sign out button            | Click                                     | Success message disappears after 4 seconds | Pass      |
-
 | SIGN UP                    |                                           |                                            |           |
 | Sign up link               | Click                                     | Redirect to sign up page                   | Pass      |
 | Username field             | Not filled in                             | click submit - form doesn't submit         | Pass      |
