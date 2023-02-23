@@ -260,35 +260,35 @@
 | Sign in button             | Click with correct login                  | Form submit                                | Pass      |
 | Sign in button             | Click with correct login                  | Redirected to home page                    | Pass      |
 | Sign in button             | Click with correct login                  | Success message confirming login diplayed  | Pass      |
-| Sign in button             | Click with correct login                  | Success message fades after 4 seconds      | Pass      |
+| Sign in button             | Click with correct login                  | Success message disappears after 4 seconds | Pass      |
 |                            |                                           |                                            |           |
-| Log Out Confirmation       |                                           |                                            |           |
-| Logout button              | Click                                     | Redirect to homepage                       | Pass      |
-| Logout button              | Click                                     | Success message confirming log out appears | Pass      |
-| Logout button              | Click                                     | Success message fades after 4 seconds      | Pass      |
+| SIGN OUT                   |                                           |                                            |           |
+| Sign out button            | Click                                     | Redirects to homepage                      | Pass      |
+| Sign out button            | Click                                     | Success message confirming log out displays| Pass      |
+| Sign out button            | Click                                     | Success message disappears after 4 seconds | Pass      |
 
-| Sign Up                    |                                           |                                            |           |
-| Log in link                | Click                                     | Redirect to login page                     | Pass      |
-| Username field             | Leave empty                               | On submit: form won't submit               | Pass      |
-| Username field             | Leave empty                               | Error message displays                     | Pass      |
-| Username field             | Insert correct format                     | On submit: form submit                     | Pass      |
-| Username field             | Insert duplicate username                 | On submit: form won't submit               | Pass      |
-| Username field             | Insert duplicate username                 | Error message displays                     | Pass      |
-| Email field                | Insert incorrect format                   | On submit: form won't submit               | Pass      |
-| Email field                | Insert incorrect format                   | Error message displays                     | Pass      |
-| Email field                | Insert correct format                     | On submit: form submit                     | Pass      |
-| Email field                | Leave empty                               | On submit: form submit                     | Pass      |
-| Email field                | Insert duplicate email                    | On submit: form won't submit               | Pass      |
-| Email field                | Insert duplicate email                    | Error message displays                     | Pass      |
-| Password field             | Insert incorrect format                   | On submit: form won't submit               | Pass      |
+| SIGN UP                    |                                           |                                            |           |
+| Sign up link               | Click                                     | Redirect to sign up page                   | Pass      |
+| Username field             | Not filled in                             | click submit - form doesn't submit         | Pass      |
+| Username field             | Not filled in                             | Error message displays                     | Pass      |
+| Username field             | Correctly filled in                       | Click submit - form submits                | Pass      |
+| Username field             | Username is alredy used                   | Click submit - form doesn't submit         | Pass      |
+| Username field             | Username is alredy used                   | Error message displays                     | Pass      |
+| Email field                | Not correct email format filled           | Click submit - form doesn't submit         | Pass      |
+| Email field                | Not correct email format filled           | Error message displays                     | Pass      |
+| Email field                | Correct format filled in                  | Click submit - form submits                | Pass      |
+| Email field                | Not filled in                             | Click submit - form doesn't submit         | Pass      |
+| Email field                | Email address already used                | Click submit - form doesn't submit         | Pass      |
+| Email field                | Email address already used                | Error message displays                     | Pass      |
+| Password field             | Insert incorrect format                   | Click submit - form doesn't submit         | Pass      |
 | Password field             | Insert incorrect format                   | Error message displays                     | Pass      |
-| Password field             | Passwords don't match                     | On submit: form won't submit               | Pass      |
+| Password field             | Passwords don't match                     | Click submit - form doesn't submit         | Pass      |
 | Password field             | Passwords don't match                     | Error message displays                     | Pass      |
-| Password field             | Insert correct format and passwords match | On submit: form submit                     | Pass      |
-| Sign Up button(form valid) | Click                                     | Form submit                                | Pass      |
-| Sign Up button(form valid) | Click                                     | Redirect to home page                      | Pass      |
-| Sign Up button(form valid) | Click                                     | Success message confirming login appears   | Pass      |
-| Sign Up button(form valid) | Click                                     | Success message fades after 4 seconds      | Pass      |
+| Password field             | Passwords match and correct format        | Click submit - form submits                | Pass      |
+| Sign up button(valid form) | Click                                     | Form submits                               | Pass      |
+| Sign up button(valid form) | Click                                     | Redirected to home page                    | Pass      |
+| Sign up button(valid form) | Click                                     | Success message confirming login displays  | Pass      |
+| Sign up button(valid form) | Click                                     | Success message disappears after 4 seconds | Pass      |
 
 
 
