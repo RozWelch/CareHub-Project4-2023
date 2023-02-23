@@ -90,8 +90,87 @@
     ![comments](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/comments.jpg)
 
 ### EPIC | Care Provider Account
-    * As a care provider,  I can login and logout, so that I can access my details
+* As a care provider,  I can login and logout, so that I can access my details
+    <details>
+    <summary>Log in /out</summary>
+    * A link is provided in the navbar to log in or log out
+    * If login is selected, A login form is then available
+    * If logout is selected, the user is asked if they are sure they wish to logout
+    ![signin](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/sign_in.jpg)
+    ![signout](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/sign_out.jpg)
+
     * As a care provider,  I can see my login status so that I can know if I am logged in or out 
+    <details>
+    <summary>Logged in status</summary>
+    * An icon and user name is displayed if the user is logged in
+    * If the user is not logged: register and login menu items are displayed
+    ![status](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/testingimages/loggedin.jpg)
+    ![nav1](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/nav_loggedout.jpg)
+
     * As a care provider,  I can create an account, so that I can add my details 
+    <details>
+    <summary>Add a care provider</summary>
+    * If the user is logged in, a new care provider account can be created, which is approved by Admin
+    ![addprovider](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/add_provider.jpg)  
+
     * As a care provider,  I can update my account details, so that I can manage my account content
+    <details>
+    <summary>Edit a care provider</summary>
+    * If the user is logged in, Edit button is displayed under the Care Provider details created by that user
+    * If the user is logged in, a care provider can edit a Care Provider which was created by them
+    ![editprovider](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/edit_provider.jpg) 
+
     * As a care provider,  I can delete my account details, so that I can manage my account 
+
+    https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/delete_provider.jpg
+    <details>
+    <summary>Delete a care provider</summary>
+    * If the user is logged in, Delete button is displayed under the Care Provider details created by that user
+    * If the user is logged in, a care provider can delete a Care Provider which was created by them
+    * They will be asked to confirm they wish to delete
+    ![deleteprovider](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/featuresimages/delete_provider.jpg) 
+
+
+### EPIC |  Site Admin
+* As a Site Admin,  I can approve care provider’s accounts, so that I can check they are authentic care providers
+    <details>
+    <summary>Approve care provider</summary>
+    * From the admin panel, the Site Admin can approve a provider
+    ![adminappprovider](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/testingimages/admin_approve_careprovider.jpg) 
+* As a Site Admin,  I can add a care provider account, so that I can add to the site content's list of care providers
+    <details>
+    <summary>Add care provider</summary>
+    * From the admin panel, the Site Admin can add a provider
+    ![adminaddprovider](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/testingimages/admin_add_provider.jpg)
+* As a Site Admin,  I can update or delete a care provider’s accounts, so that I can manage my care providers content
+    <details>
+    <summary>Admin update or delete care provider</summary>
+    * From the admin panel, the Site Admin can update or delete a provider
+    ![admindelprovider](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/testingimages/admin_delete_provider.jpg)
+    ![admineditprovider](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/testingimages/admin_update_careprovider.jpg)
+* As a Site Admin,  I can approve comments, so that I can filter out objectionable comments
+    <details>
+    <summary>Approve comments</summary>
+    * From the admin panel, the Site Admin can approve comments
+    ![adminappcomms](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/testingimages/admin_approve_delete_coms.jpg)
+* As a Site Admin, I can update comments, so that I can manage my care providers content
+    <details>
+    <summary>Update comments</summary>
+    * From the admin panel, the Site Admin can update comments
+    ![adminupdatecomms](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/testingimages/admin_edit_provider.jpg)
+* As a Site Admin, I can delete comments, so that I can manage my care providers content
+    <details>
+    <summary>Delete comments</summary>
+    * From the admin panel, the Site Admin can delete comments
+    ![admindelcomms](https://github.com/RozWelch/CareHub-Project4-2023/blob/main/assets/readmeimages/testingimages/admin_approve_delete_coms.jpg)
+
+
+## Browser and Devices Tests
+* Browsers: tested on Google Chrome and Safari browsers with no issues noted.
+* Devices: viewed on the following devices to check responsiveness: iPhone 11 Pro, iPhone 14, Samsung Galaxy, iPad, iMac pro 15in screen, iMac 27in screen
+* Chrome Developer tools: checked multiple devices to check responsiveness
+
+
+## Manual Tests
+
+### Home Page
